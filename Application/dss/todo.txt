@@ -1,0 +1,78 @@
+Enter
+	Enroll student [registrar, admin]
+	assessment [accounting, admin]
+	invoice (cashier) [cashier, admin]
+	promisory note [accounting, admin]
+Process
+	promisory note (for approval) [accounting, admin]
+reports
+	Inventory [admin] (Form-detail)
+		Inventory history of replenishment/adjustment/deduction
+	Invoice [admin, accounting] 
+	schedules (section, faculty, room)
+	Accounts receivable
+maintenance
+	My account
+	Company (list, form)
+	Employees (form-detail)
+		schedule (search)
+	User Type (form-detail)
+		Priveleges (grid)
+	Users (list, activate/deactivate)
+	
+	Courses (form-detail)
+			Tuition fee
+			Misc. fee
+	Other fees (grid)add, disable.)
+	
+	School year (grid, used as controlled selector for school year entry. set default, 
+	
+	Year level (grid, enable/disable 5th year)
+	semester (grid, enable/disable 3rd sem, summer)
+	
+	Rooms (form-detail)
+		schedule (search)
+	Subjects (grid)
+	Sections (form-section)
+		schedule (search)
+System Version
+
+
+
+links:
+/notifications (done)
+/dashboard
+/enroll (active)
+/assessment
+/invoice
+/promisory
+/process_promisory
+/inventory_count
+/invoice_report
+/schedules
+/accounts_receivable
+/company (done)
+/employees
+/usertype
+/users
+/courses
+/other_fees
+/school_year
+/year_level
+/semester
+/rooms
+/subjects
+/system
+/myaccount
+/sections
+
+
+improvements
+live notification [use ajax]
+implement vue.js on (list, form)
+implement navigation thru records on form using ajax/vue.js
+implement create record on form using vue.js/ajax (ajax. done)
+implement read record on form using vue.js/ajax (ajax. done)
+implement update using ajax/vue.js
+implement delete record on form using vue.js/ajax
+
