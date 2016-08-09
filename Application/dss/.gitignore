@@ -1,4 +1,4 @@
-/vendor/*
+
 !/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php
 /node_modules
 /public/storage
