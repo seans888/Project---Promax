@@ -50,9 +50,27 @@ public static function saveUserLevelAccess($UserTypeCode){
                     'company_id' => 1,
                     'AccessLevel_code' => 'unittype',
                     'enabled' => 1,
-			     	'canadd' => 1,
-			     	'candelete' => 1,
-			     	'cansave' => 1
+                    'canadd' => 1,
+                    'candelete' => 1,
+                    'cansave' => 1
+                    ];
+                    $company1MaintenanceDocumentItem = [
+                    'usertype_code' => $UserTypeCode,
+                    'company_id' => 1,
+                    'AccessLevel_code' => 'documentitem',
+                    'enabled' => 1,
+                    'canadd' => 1,
+                    'candelete' => 1,
+                    'cansave' => 1
+                    ];
+                    $company1Maintenancepercentpricing = [
+                    'usertype_code' => $UserTypeCode,
+                    'company_id' => 1,
+                    'AccessLevel_code' => 'percentpricing',
+                    'enabled' => 1,
+                    'canadd' => 1,
+                    'candelete' => 1,
+                    'cansave' => 1
                     ];
                 //for reports
                     $company1leasecontractReport = [
@@ -122,7 +140,26 @@ public static function saveUserLevelAccess($UserTypeCode){
                     'candelete' => 1,
                     'cansave' => 1
                     ];
+                     $company1EnterInvoice = [
+                    'usertype_code' => $UserTypeCode,
+                    'company_id' => 1,
+                    'AccessLevel_code' => 'invoice',
+                    'enabled' => 1,
+                    'canadd' => 1,
+                    'candelete' => 1,
+                    'cansave' => 1
+                    ];
                      
+                    $company1EnterPayment = [
+                    'usertype_code' => $UserTypeCode,
+                    'company_id' => 1,
+                    'AccessLevel_code' => 'payment',
+                    'enabled' => 1,
+                    'canadd' => 1,
+                    'candelete' => 1,
+                    'cansave' => 1
+                    ];
+
         $company1 = [
             $company1admincompany,
             $company1adminmanageusertype,
@@ -134,6 +171,11 @@ public static function saveUserLevelAccess($UserTypeCode){
             $company1adminunittype,
             $company1EnterUnits,
             $company1EnterTenant,
+            $company1EnterInvoice,
+            $company1EnterPayment,
+            $company1MaintenanceDocumentItem,
+            $company1Maintenancepercentpricing,
+            
          ];
          DB::table('usertypeaccesslevel')->insert($company1);
     }    

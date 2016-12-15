@@ -52,7 +52,25 @@ Route::auth();
 	Route::get('/units/new', ['uses'=>'UnitsController@newunits', 'as' => 'units','middleware' => 'roles']);
 	Route::get('/units/get/{id}', ['uses'=>'UnitsController@getunits', 'as' => 'units','middleware' => 'roles']);
 	
-	Route::get('/dss', ['uses'=>'DecisionSupportController@dss', 'as' => 'dss','middleware' => 'roles']);
+	Route::get('/invoice/list', ['uses'=>'InvoiceController@invoicelist', 'as' => 'invoice','middleware' => 'roles']);
+	Route::get('/invoice/new', ['uses'=>'InvoiceController@newinvoice', 'as' => 'invoice','middleware' => 'roles']);
+	Route::get('/invoice/get/{id}', ['uses'=>'InvoiceController@getinvoice', 'as' => 'invoice','middleware' => 'roles']);
+	
+	Route::get('/payment/list', ['uses'=>'PaymentController@paymentlist', 'as' => 'payment','middleware' => 'roles']);
+	Route::get('/payment/new', ['uses'=>'PaymentController@newpayment', 'as' => 'payment','middleware' => 'roles']);
+	Route::get('/payment/get/{id}', ['uses'=>'PaymentController@getpayment', 'as' => 'payment','middleware' => 'roles']);
+	
+	Route::get('/reservationcontract/generateinvoice/{contract_id}', ['uses'=>'ReservationContractController@generateinvoice', 'as' => 'generateinvoice']);
+	Route::post('/invoice/generatepayment/{invoice_id}', ['uses'=>'PaymentController@generatepayment', 'as' => 'generatepayment']);
+	
+	Route::get('/documentitem/list', ['uses'=>'DocumentItemController@documentitemlist', 'as' => 'documentitem','middleware' => 'roles']);
+	Route::get('/documentitem/new', ['uses'=>'DocumentItemController@newdocumentitem', 'as' => 'documentitem','middleware' => 'roles']);
+	Route::get('/documentitem/get/{id}', ['uses'=>'DocumentItemController@getdocumentitem', 'as' => 'documentitem','middleware' => 'roles']);
+	
+	Route::get('/percentpricing/', ['uses'=>'PercentPricingValueController@getpercentpricing', 'as' => 'percentpricing','middleware' => 'roles']);
+	Route::post('/percentpricing/', ['uses'=>'PercentPricingValueController@postpercentpricing', 'as' => 'percentpricing','middleware' => 'roles']);
+	
+	//Route::get('/dss', ['uses'=>'DecisionSupportController@dss', 'as' => 'dss','middleware' => 'roles']);
 
 //posts
 	Route::post('/company/{id}', ['uses'=>'CompanyController@postCompany','middleware' => 'roles']);
@@ -86,8 +104,26 @@ Route::auth();
 	Route::post('/reservationcontract/new', ['uses'=>'ReservationContractController@postReservationContract', 'as' => 'postReservationContract','middleware' => 'roles']);
 	Route::post('/reservationcontract/delete/{id}', ['uses'=>'ReservationContractController@deleteReservationContract', 'as' => 'deleteReservationContract']);
 	Route::post('/reservationcontract/delete2/{id}', ['uses'=>'ReservationContractController@deleteReservationContract2', 'as' => 'deleteReservationContract']);
+	Route::post('/invoice/get/{id}', ['uses'=>'invoiceController@postinvoice', 'as' => 'postinvoice','middleware' => 'roles']);
+	Route::post('/invoice/new', ['uses'=>'invoiceController@postinvoice', 'as' => 'postinvoice','middleware' => 'roles']);
+	Route::post('/invoice/delete/{id}', ['uses'=>'invoiceController@deleteinvoice', 'as' => 'deleteinvoice']);
+	Route::post('/invoice/saveinvoicedetail/{id}', ['uses'=>'invoiceController@saveinvoicedetail', 'as' => 'saveinvoicedetail']);
+	Route::post('/invoice/deleteinvoicedetail/{id}', ['uses'=>'invoiceController@deleteinvoicedetail', 'as' => 'deleteinvoicedetail']);
+	Route::post('/invoice/release/{id}', ['uses'=>'invoiceController@releaseinvoice', 'as' => 'releaseinvoice']);
+	Route::get('/invoice/getpayerbycontract/{id}', ['uses'=>'invoiceController@GetPayerByContract']);
+	
+	Route::post('/payment/get/{id}', ['uses'=>'PaymentController@postpayment', 'as' => 'postpayment','middleware' => 'roles']);
+	Route::post('/payment/new', ['uses'=>'PaymentController@postpayment', 'as' => 'postpayment','middleware' => 'roles']);
+	Route::post('/payment/delete/{id}', ['uses'=>'PaymentController@deletepayment', 'as' => 'deletepayment']);
+	Route::post('/payment/deleteDetail/{id}', ['uses'=>'PaymentController@deletepaymentdetail', 'as' => 'deletepaymentdetail']);
+	Route::post('/payment/release/{id}', ['uses'=>'PaymentController@releasepayment', 'as' => 'releasepayment']);
+
+	Route::post('/documentitem/get/{id}', ['uses'=>'DocumentItemController@postdocumentitem', 'as' => 'postdocumentitem','middleware' => 'roles']);
+	Route::post('/documentitem/new/', ['uses'=>'DocumentItemController@postdocumentitem', 'as' => 'postdocumentitem','middleware' => 'roles']);
+	Route::post('/documentitem/delete/{id}', ['uses'=>'DocumentItemController@deletedocumentitem', 'as' => 'deletedocumentitem']);
 	
 //API
+	
 	Route::get('/api/company/{id}', ['uses'=>'CompanyController@apiCompany']);
 	Route::get('/api/UserType/{code}', ['uses'=>'UserTypeController@apiUserType']);
 	Route::get('/api/user/{username}', ['uses'=>'UserController@apiuser']);

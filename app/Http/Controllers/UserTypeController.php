@@ -46,8 +46,8 @@ class UserTypeController extends Controller
         return $UserType;
     }
     public function UserTypes(){
-        $data['title'] = "UserTypes";
-        $data['header'] = "List of UserTypes";
+        $data['title'] = "User Types";
+        $data['header'] = "List of User Types";
         $data['Model'] = UserType::where('company_id', Auth::user()->company_id)->get();
         $data['tablePartialView'] = "partials.UserTypeTable";
         $data['canAdd'] = Auth::user()->canAdd('usertypes');
@@ -69,9 +69,21 @@ class UserTypeController extends Controller
         $data['cansave'] = Auth::user()->cansave('usertypes');
         $data['candelete'] = Auth::user()->candelete('usertypes');
 
-        $data['title'] = "UserType";
+        $data['title'] = "User Type";
         $data['formViewPartial'] = "partials.UserTypeForm";
         $data['ModelURIlistview'] = "usertypes";
+        $listOfIDs = "";
+            $usertype = $UserType;
+            $UserTypeAccessLevelsAllRaw = $usertype->UserTypeAccessLevel();
+            $UserTypeAccessLevelsAll = $UserTypeAccessLevelsAllRaw->where('company_id', Auth::user()->company_id)
+            ->where('AccessLevel_code', '!=', 'myaccount')->get();
+                            
+        foreach($UserTypeAccessLevelsAll as $UserTypeAccessLevel){
+            $listOfIDs .= $UserTypeAccessLevel->id . ",";
+        }
+        $listOfIDs = rtrim($listOfIDs, ',');
+
+        $data['UserTypeAccessLevelIDs'] = $listOfIDs;
         $company_id = Auth::user()->company_id;
 $data['create'] = "/usertype/";
         
@@ -84,7 +96,7 @@ $data['create'] = "/usertype/";
         $data['ModelURI'] = "usertype";
         $data['ModelIDnew'] = "getUserType_new";
         $data['ModelIDdelete'] = "getUserType_delete";
-        $data['title'] = "UserType";
+        $data['title'] = "User Type";
         $data['formViewPartial'] = "partials.UserTypeForm";
         $data['ModelURIlistview'] = "usertypes";
         $data['create'] = "/usertype/";
@@ -94,7 +106,18 @@ $data['create'] = "/usertype/";
         $data['canadd'] = Auth::user()->canAdd('usertypes');
         $data['cansave'] = Auth::user()->cansave('usertypes');
         $data['candelete'] = Auth::user()->candelete('usertypes');
+        $listOfIDs = "";
+            $usertype = new UserType();
+            $UserTypeAccessLevelsAllRaw = $usertype->UserTypeAccessLevel();
+            $UserTypeAccessLevelsAll = $UserTypeAccessLevelsAllRaw->where('company_id', Auth::user()->company_id)
+            ->where('AccessLevel_code', '!=', 'myaccount')->get();
+                            
+        foreach($UserTypeAccessLevelsAll as $UserTypeAccessLevel){
+            $listOfIDs .= $UserTypeAccessLevel->id . ",";
+        }
+        $listOfIDs = rtrim($listOfIDs, ',');
 
+        $data['UserTypeAccessLevelIDs'] = $listOfIDs;
          if(Auth::user()->canAdd('usertypes') == false || Auth::user()->canAdd('usertypes') == 0){
             return $this->UserTypes();
         }
@@ -112,20 +135,20 @@ $data['create'] = "/usertype/";
 	    	$UserType = UserType::where('code', $request->code)->where('company_id', Auth::user()->company_id)->first();
 	    	if($UserType){
                 $UserType->code = $request->code;
-				$affirmationMessage = "UserType information updated successfully!";
+				$affirmationMessage = "User Type information updated successfully!";
 			} else{
                 //putting new UserType code results in "add" function
 		    	$UserType = new UserType();
 		    	$UserType->code = $request->code;
                 
         
-                $affirmationMessage = "UserType created successfully!";
+                $affirmationMessage = "User Type created successfully!";
 			}
     	}
     	if($code == null){
             $UserType = new UserType();
             $UserType->code = $request->code;
-            $affirmationMessage = "UserType created successfully!";
+            $affirmationMessage = "User Type created successfully!";
         }
     	$UserType->code = $request->code;
     	$UserType->desc=$request->desc;
@@ -134,7 +157,7 @@ $data['create'] = "/usertype/";
     	
             
         $UserType->save();
-        if($affirmationMessage == "UserType created successfully!"){
+        if($affirmationMessage == "User Type created successfully!"){
             AccessLevel::saveUserLevelAccess($UserType->code);
         } 
         return redirect('/usertype/' . $UserType->code)->with('affirm', $affirmationMessage);
@@ -142,7 +165,7 @@ $data['create'] = "/usertype/";
     public function deleteUserType($code){
         $UserType = UserType::where('code', $code)->where('company_id', Auth::user()->company_id)->first();
         $UserType->delete();
-        $affirmationMessage = "UserType deleted successfully!";
+        $affirmationMessage = "User Type deleted successfully!";
         return redirect('/usertype/')->with('affirm', $affirmationMessage);
     }
     

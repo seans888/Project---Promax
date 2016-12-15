@@ -11,6 +11,11 @@ use App\User;
 use App\Property;
 use App\Unit;
 use App\Tenants;
+use App\Invoice;
+use App\Constants;
+use App\InvoiceDetails;
+use DateTime;
+use DateInterval;
 class ReservationContractController extends Controller
 {
 
@@ -25,8 +30,126 @@ class ReservationContractController extends Controller
 
         return view('listview', $data);
     }
+    public function add_months($months, DateTime $dateObject) 
+    {
+        $next = new DateTime($dateObject->format('Y-m-d'));
+        $next->modify('last day of +'.$months.' month');
+
+        if($dateObject->format('d') > $next->format('d')) {
+            return $dateObject->diff($next);
+        } else {
+            return new DateInterval('P'.$months.'M');
+        }
+    }
+
+    public function endCycle($d1, $months)
+    {
+        $date = new DateTime($d1);
+
+        // call second function to add the months
+        $newDate = $date->add($this->add_months($months, $date));
+
+        // goes back 1 day from date, remove if you want same day of month
+        $newDate->sub(new DateInterval('P1D')); 
+
+        //formats final date to Y-m-d form
+        $dateReturned = $newDate->format('Y-m-d'); 
+
+        return $dateReturned;
+    }
+    public function generateinvoice($contract_id){
+
+        $invoice = new Invoice();
+        $invoice->company_id = Auth::user()->company_id;
+        $invoice->status = Constants::DRAFT;
+        $invoice->reservationcontract_id = $contract_id;
+        $contract = ReservationContract::where('id', $contract_id)->where('company_id', Auth::user()->company_id)->first();
+        $latestBill = $contract->LatestBillingDate();
+        $startDate = date("Y-m-d");
+        if($latestBill != null){
+            $startDate = new DateTime($latestBill);
+            $startDate->modify('+1 month');
+        } else{
+            $startDate = new DateTime($contract->startdate);
+        }
+
+
+            $endDate = $this->endCycle($startDate->format('Y-m-d'), 1);
+            $invoice->billingPeriodStart = $startDate;
+            $invoice->billingPeriodEnd = $endDate;
+            $invoice->date = $startDate;
+            $invoice->duedate = $endDate;
+        if($contract->status = "Active"){
+            $latestBilling = $contract->LatestDueDate();
+            $previousinvoice = $contract->LatestInvoice();
+            $invoice->payer_id = $contract->tenants_id;
+            $invoice->date = $startDate;
+            $invoice->issuedBy = Auth::user()->name;
+            $invoice->save();
+             //add penalty if beyond due date
+            if( ($invoice->date > $latestBilling) && ($contract->Balance() > 0)){
+                $unpaidBalance = $contract->Balance();
+
+                $Penalty = new InvoiceDetails();
+                $Penalty->invoice_id = $invoice->id;
+                $Penalty->documentItem_code = Constants::PENALTY;
+                $Penalty->note = "";
+                $Penalty->amount = $Penalty->calculatePenalty($contract->Balance());
+                $Penalty->company_id= $invoice->company_id;
+                $Penalty->save();
+
+
+                $previousInvoiceUnpaid = new InvoiceDetails();
+                $previousInvoiceUnpaid->invoice_id = $invoice->id;
+                $previousInvoiceUnpaid->documentItem_code = Constants::PREVIOUSINVOICEUNPAIDBALANCE;
+                $previousInvoiceUnpaid->amount = $unpaidBalance;
+                $previousInvoiceUnpaid->company_id = $invoice->company_id;
+                $previousInvoiceUnpaid->save();
+
+                //adjust previous invoice so that balance will be 0
+                $transferred = new InvoiceDetails();
+                $transferred->invoice_id = $previousinvoice->id;
+                $transferred->documentItem_code = Constants::TRANSFERRED;
+                $transferred->note = "";
+                $transferred->amount = $unpaidBalance * -1;
+                $transferred->company_id= $invoice->company_id;
+                $transferred->save();
+
+                $previousinvoice->status = Constants::TRANSFERRED;
+                $previousinvoice->save();
+            }
+            
+            $LeaseBill = new InvoiceDetails();
+            //insert monthly billing, wtax, and vat
+            $LeaseBill->documentItem_code = Constants::LEASEBILL;
+            $LeaseBill->invoice_id = $invoice->id;
+            $LeaseBill->amount = $contract->unitBasicRent;
+            $LeaseBill->company_id= $invoice->company_id;
+            $LeaseBill->save();
+            if($contract->taxAdjustment == Constants::FORPROFIT){
+                $WTax = new InvoiceDetails();
+                $WTax->documentItem_code = Constants::WTAX;
+                $WTax->invoice_id = $invoice->id;
+                $WTax->amount = $WTax->calculateWTax($invoice->wtaxableAmount());
+                $WTax->company_id= $invoice->company_id;
+                $WTax->save();
+
+                $VATax = new InvoiceDetails();
+                $VATax->invoice_id = $invoice->id;
+                $VATax->documentItem_code = Constants::VATAX;
+                $VATax->amount = $VATax->calculateVATax($invoice->vataxableAmount());
+                $VATax->company_id= $invoice->company_id;
+                $VATax->save();
+            }
+           
+
+            return redirect('/invoice/get/' . $invoice->id)->with('info', "Invoice Generated, Please supply necessary details and then save");
+        } else {
+            return redirect('/reservationcontract/get/' . $contract_id)->with('error', 'Reservation Contract is Expired. Cannot apply invoice with date beyond end of contract date');
+        }
+    }
     public function getReservationContract($id){
-    	 $contract = ReservationContract::where('id', $id)->where('company_id', Auth::user()->company_id)->first();
+         $contract = ReservationContract::where('id', $id)->where('company_id', Auth::user()->company_id)->first();
         if($contract == null){
             return redirect('/reservationcontract/list/');
         }
@@ -39,19 +162,37 @@ class ReservationContractController extends Controller
         $data['ModelURIlistview'] = "reservationcontract/list";
         $company_id = auth::user()->company_id;
         $data['formID'] = "formGetReservationContract";
-		$data['create'] = "/reservationcontract/new";
+        $data['create'] = "/reservationcontract/new";
 
         $data['canadd'] = Auth::user()->canAdd('enterreservationcontract');
+        
         $data['cansave'] = Auth::user()->cansave('enterreservationcontract');
         $data['candelete'] = Auth::user()->candelete('enterreservationcontract');
-
+        if($contract->status != null && $contract->status != "Draft"){
+            $data['candelete'] = false;
+                
+        }
+        if($contract->status == "Active" && $contract->haveInvoices() == false){
+            $data['cansave'] = true;
+        }
         $data['tenants'] = Tenants::where('company_id', Auth::user()->company_id)->get();
         $data['properties'] = Property::where('company_id', Auth::user()->company_id)->get();
         $data['units'] = Unit::where('company_id', Auth::user()->company_id)->get();
-        return view('formView2', $data);
+
+        $actions = [];
+        
+        if($contract->status != null && $contract->status == "Active" && Auth::user()->canAdd('invoice') == true && !$contract->isExpired()){
+            array_push($actions, '<a href="/reservationcontract/generateinvoice/' . $contract->id . '" class="btn btn-default" id="getReservationContract_generateInvoice">Generate Invoice</a>');
+        }
+        if($contract->isExpired() && $contract->status != "End of Contract"){
+            $contract->status = "End of Contract";
+            $contract->save();
+        }
+        $data['actions'] = $actions;
+        return view('formView3', $data);
     }
      public function newReservationContract(Request $request){
-    	 $contract = new ReservationContract();
+         $contract = new ReservationContract();
         
         $data['ModelURI'] = "ReservationContract";
         $data['ModelIDnew'] = "getreservationcontract_new";
@@ -61,7 +202,7 @@ class ReservationContractController extends Controller
         $data['ModelURIlistview'] = "reservationcontract/list";
         $company_id = auth::user()->company_id;
         $data['formID'] = "formGetReservationContract";
-		$data['create'] = "/reservationcontract/new";
+        $data['create'] = "/reservationcontract/new";
 
 
         $data['tenants'] = Tenants::where('company_id', Auth::user()->company_id)->get();
@@ -69,9 +210,13 @@ class ReservationContractController extends Controller
         $data['canadd'] = Auth::user()->canAdd('enterreservationcontract');
         $data['cansave'] = Auth::user()->cansave('enterreservationcontract');
         $data['candelete'] = Auth::user()->candelete('enterreservationcontract');
-
+        if($contract->status != null && $contract->status != "Draft"){
+            $data['cansave'] = false;
+            $data['candelete'] = false;
+                
+        }
         $data['Model'] = $contract;
-		$data['properties'] = Property::where('company_id', Auth::user()->company_id)->get();
+        $data['properties'] = Property::where('company_id', Auth::user()->company_id)->get();
 
         $data['units'] = Unit::where('company_id' , Auth::user()->company_id)->get();
         return view('formView2', $data);
@@ -105,7 +250,8 @@ class ReservationContractController extends Controller
         $contract->natureofbusiness = $request->natureofbusiness;
         $contract->reservationfee = $request->reservationfee;
         $contract->bankcheckno = $request->bankcheckno;
-
+        $contract->status = $request->status;
+        $contract->taxAdjustment = $request->taxAdjustment;
         $contract->save();
         
         return redirect('/reservationcontract/get/' . $contract->id)->with('affirm', $affirmationMessage);
