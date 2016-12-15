@@ -30,7 +30,7 @@ class AccessLevelTableSeeder extends Seeder
 		     	'code' => 'usertypes',
 		     	'company_id' => 1,
 		     	'process' => 'maintenance',
-		     	'uifieldname' => 'UserTypes',
+		     	'uifieldname' => 'User Types',
 		     	'uri' => '/usertypes',
 		     	'icon' => 'fa-sitemap'
 		     	];
@@ -48,8 +48,24 @@ class AccessLevelTableSeeder extends Seeder
 				'code' => 'unittype',
 		     	'company_id' => 1,
 		     	'process' => 'maintenance',
-		     	'uifieldname' => 'UnitType',
+		     	'uifieldname' => 'Unit Type',
 		     	'uri' => '/unittype/list',
+		     	'icon' => 'fa-file-text-o'
+		     	];
+		     	$company1DocumentItem = [
+				'code' => 'documentitem',
+		     	'company_id' => 1,
+		     	'process' => 'maintenance',
+		     	'uifieldname' => 'Document Items',
+		     	'uri' => '/documentitem/list',
+		     	'icon' => 'fa-file-text-o'
+		     	];
+		     	$company1percentpricing = [
+				'code' => 'percentpricing',
+		     	'company_id' => 1,
+		     	'process' => 'maintenance',
+		     	'uifieldname' => 'Percent Pricing settings',
+		     	'uri' => '/percentpricing',
 		     	'icon' => 'fa-file-text-o'
 		     	];
    	//reports
@@ -84,7 +100,7 @@ class AccessLevelTableSeeder extends Seeder
 	     	'code' => 'properties',
 	     	'company_id' => 1,
 	     	'process' => 'enter',
-	     	'uifieldname' => 'Properties',
+	     	'uifieldname' => 'List of Properties',
 	     	'uri' => '/property/list',
 	     	'icon' => 'fa-building-o'
 	     	];			
@@ -100,7 +116,7 @@ class AccessLevelTableSeeder extends Seeder
 	     	'code' => 'units',
 	     	'company_id' => 1,
 	     	'process' => 'enter',
-	     	'uifieldname' => 'Units',
+	     	'uifieldname' => 'List of Units',
 	     	'uri' => '/units/list',
 	     	'icon' => 'fa-file-text-o'
 	     	];					
@@ -110,6 +126,22 @@ class AccessLevelTableSeeder extends Seeder
 	     	'process' => 'enter',
 	     	'uifieldname' => 'Tenants',
 	     	'uri' => '/tenant/list',
+	     	'icon' => 'fa-file-text-o'
+	     	];								
+	     	$company1Invoice = [
+	     	'code' => 'invoice',
+	     	'company_id' => 1,
+	     	'process' => 'enter',
+	     	'uifieldname' => 'Invoice',
+	     	'uri' => '/invoice/list',
+	     	'icon' => 'fa-file-text-o'
+	     	];			
+			$company1Payment = [
+	     	'code' => 'payment',
+	     	'company_id' => 1,
+	     	'process' => 'enter',
+	     	'uifieldname' => 'Payments',
+	     	'uri' => '/payment/list',
 	     	'icon' => 'fa-file-text-o'
 	     	];			
 
@@ -125,6 +157,10 @@ class AccessLevelTableSeeder extends Seeder
 			$company1UnitType,
 			$company1Units,
 			$company1Tenant,
+			$company1Invoice,
+			$company1Payment,
+			$company1DocumentItem,
+			$company1percentpricing,
 			];
          DB::table('accesslevel')->insert($company1);
     }

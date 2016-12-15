@@ -12,7 +12,12 @@ class DatabaseSeeder extends Seeder
 
     public function run()
     {
-        
+        DB::table('percentPricingValues')->delete();
+        DB::table('invoicepayments')->delete(); 
+        DB::table('payments')->delete(); 
+        DB::table('invoicedetails')->delete(); 
+        DB::table('documentItem')->delete();
+        DB::table('invoice')->delete();
         DB::table('reservationcontract')->delete();
         DB::table('tenants')->delete();
         DB::table('unit')->delete();
@@ -34,6 +39,12 @@ class DatabaseSeeder extends Seeder
         $this->call(UnitTableSeeder::class);
         $this->call(TenantsTableSeeder::class);
         $this->call(ReservationContractTableSeeder::class);
+        $this->call(InvoiceTableSeeder::class);
+        $this->call(DocumentItemTableSeeder::class);
+        $this->call(InvoiceDetailsTableSeeder::class);
+        $this->call(PaymentsTableSeeder::class);
+        $this->call(InvoicePaymentsTableSeeder::class);
+        $this->call(PercentPricingValueTableSeeder::class);
         
     }
 }

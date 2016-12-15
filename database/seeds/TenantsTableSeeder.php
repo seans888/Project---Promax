@@ -26,6 +26,19 @@ class TenantsTableSeeder extends Seeder
             'firstname' => 'Aurelio',
             'middlename' => 'R'
             ]
+            ,
+            [
+            'id' => 2,
+            'tenantname' => 'Jonny Jacobs',
+            'address' => 'Quezon City',
+            'telno' => '123-4567',
+            'mobileno' => '09150001000',
+            'occupation' => 'Mechanical Engineer',
+            'company_id' => 1,
+            'civilstatus' => 'single',
+            'lastname' => 'Jacobs',
+            'firstname' => 'Jonny',
+            'middlename' => 'Qui'           ]
             
         ]);
 
