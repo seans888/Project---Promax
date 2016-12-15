@@ -17,6 +17,7 @@
                           <thead>
                           <tr>
                           
+                            <th>Status</th>
                             <th>Unit type</th>
                             <th>Unit No.</th>
                             <th>Tenant Name</th>
@@ -40,6 +41,7 @@
                           @foreach($tenants as $tenant)
 
                           <tr id = "tenantstable_current{{$tenant->id}}">
+                            <td>{{$tenant->status}}</td>
                             <td>{{$tenant->Unit->unittype_unittype}}</td>
                             <td>{{$tenant->unitnumber}}</td>
                             <td>{{$tenant->Tenant->tenantname}}</td>

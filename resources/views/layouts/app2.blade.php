@@ -143,7 +143,7 @@
         <li class="{{ areActiveRoutes($areActiveRoutes) }} treeview">
           
           <a href="#">
-            <i class="fa fa-pencil"></i> <span>ENTER</span> <i class="fa fa-angle-left pull-right"></i>
+            <i class="fa fa-pencil"></i> <span>DATA ENTRY</span> <i class="fa fa-angle-left pull-right"></i>
           </a>
           <ul class="treeview-menu">
             @foreach($collectionAccessLevels->where('process', 'enter') as $AccessLevel)

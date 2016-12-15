@@ -45,33 +45,25 @@
        
         <div class="box box-primary">
           <div class="box-header with-border"> 
-            <form action = "" method = "post" id = "{{$formID}}" class="mjform">
+            <form action = "" method = "post" id = "{{$formID}}">
             <div class="btn-group">
               
             
                      <!-- Default box -->
               {!! csrf_field() !!}
-              <?php
-              $navigator = $Model;
-
-              ?>
+            
               <a href = "{{URL::previous()}}"  class="btn btn-default" ><i class="fa fa-hand-o-left"></i></a>
               <button type="reset" class="btn btn-default"><i class="fa fa-refresh"></i></button>
-              @if($canadd) 
-              <a href = "{{$create}}"  class="btn btn-default" id="{{$ModelIDnew}}"><i class="fa fa-plus"></i></a>
-              @endif
+              
               @if($cansave)
               <button type="submit" class="btn btn-default"><i class="fa fa-save"></i></button>
               @endif
-              @if($candelete)
-              <button type="button" class="btn btn-default" id="{{$ModelIDdelete}}"><i class="fa fa-trash"></i></button>
-              @endif
-              <a href = "/{{$ModelURIlistview}}"  class="btn btn-default"><i class="fa fa-list"></i></a>
-              <button type="button" class="btn btn-default"  onclick="print()"><i class="fa fa-print"></i></button>
-              
+             
+             
+
             </div>
           </div>
-          @include($formViewPartial, ['Model' => $Model])
+          @include($formViewPartial, ['wtax' => $wtax, 'vatax' => $vatax, 'penalty' => $penalty])
           <!-- /.box-body -->
         </div>
 

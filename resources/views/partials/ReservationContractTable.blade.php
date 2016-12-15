@@ -2,6 +2,9 @@
                         <table class="table table-hover" id="dataTable">
                           <thead>
                             <th>Contract ID</th>
+                            <th>Status</th>
+                            <th>Tax Adjustment</th>
+                            <th>Latest Billing Date</th>
                             <th>Property</th>
                             <th>Unit type</th>
                             <th>Unit No.</th>
@@ -17,6 +20,9 @@
                           @foreach($contracts as $contract)
                           <tr>
                             <td><a href = '/reservationcontract/get/{{$contract->id}}'>{{$contract->id}}</a></td>
+                            <td>{{$contract->status}}</td>
+                            <td>{{$contract->taxAdjustment}}</td>
+                            <td>{{$contract->LatestBillingDate()}}</td>
                             <td>{{$contract->Property->name}}</td>
                             <td>{{$contract->Unit->unittype_unittype}}</td>
                             <td>{{$contract->unitnumber}}</td>

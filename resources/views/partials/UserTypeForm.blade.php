@@ -1,13 +1,13 @@
 <div class="box-body">
             <div class="form-horizontal">
               <div class="form-group">
-                <label for="inputEmail3" class="col-sm-2 control-label">UserType Code</label>
+                <label for="inputEmail3" class="col-sm-2 control-label">User Type Code</label>
                 <div class="col-sm-10">
                   <input required value="{{$Model->code}}" name='code' id="getUserType_code" value='{{$Model->code}}' type="text" min="1" class="form-control"  />
                 </div>
               </div>
               <div class="form-group">
-                <label for="inputEmail3" class="col-sm-2 control-label">UserType Desc</label>
+                <label for="inputEmail3" class="col-sm-2 control-label">User Type Desc</label>
                 <div class="col-sm-10">
                   <input required id='getUserType_desc' name='desc' value='{{($Model->desc) ? $Model->desc : old("desc")}}' type="text" class="form-control" />                  
                 </div>
@@ -32,10 +32,10 @@
                           <tr>
                             <th>Module</th>
                             <th>Process</th>
-                            <th>Enabled</th>
-                            <th>Can Add</th>
-                            <th>Can Save</th>
-                            <th>Can Delete</th>
+                            <th>Enabled <input id="CheckAllCanEnable" type = 'checkbox' name = 'checkAllCanEnable' onclick="fcheckAllToggle([{{$UserTypeAccessLevelIDs}}], 'CheckAllCanEnable', 'CanEnable')" /></th>
+                            <th>Can Add <input id="CheckAllCanAdd" type = 'checkbox' name = 'checkAllCanAdd' onclick="fcheckAllToggle([{{$UserTypeAccessLevelIDs}}], 'CheckAllCanAdd', 'CanAdd')" /></th>
+                            <th>Can Save <input id="CheckAllCanSave" type = 'checkbox' name = 'checkAllCanSave' onclick="fcheckAllToggle([{{$UserTypeAccessLevelIDs}}], 'CheckAllCanSave', 'CanSave')" /></th>
+                            <th>Can Delete <input id="CheckAllCanDelete" type = 'checkbox' name = 'checkAllCanDelete' onclick="fcheckAllToggle([{{$UserTypeAccessLevelIDs}}], 'CheckAllCanDelete', 'CanDelete')" /></th>
                           </tr>
                         </thead>
                         <tbody>
@@ -53,26 +53,26 @@
                             @if(strtolower(Auth::user()->usertype_code) == "admin" || strtolower(Auth::user()->usertype_code) == "superadmin")
                             <td>
                               <label>
-                                <input id = 'accessrights_{{$UserTypeAccessLevel->id}}' name = 'accessrights_{{$UserTypeAccessLevel->id}}' onclick="updateUserTypeAccess({{$UserTypeAccessLevel->id}});" type="checkbox"  {{($UserTypeAccessLevel->enabled) ? "checked" : "" }} {{ (strtolower($usertype->code) == 'admin' && $UserTypeAccessLevel->AccessLevel->code == "usertypes") ? "disabled" : "" }}>
+                                <input id = 'accessrights_{{$UserTypeAccessLevel->id}}' name = 'accessrights_{{$UserTypeAccessLevel->id}}' onchange="updateUserTypeAccess({{$UserTypeAccessLevel->id}});" type="checkbox"  {{($UserTypeAccessLevel->enabled) ? "checked" : "" }} {{ (strtolower($usertype->code) == 'admin' && $UserTypeAccessLevel->AccessLevel->code == "usertypes") ? "disabled" : "" }}>
                               </label>
                                 
                             </td>
                             <td>
                               <label>
-                                <input id = 'accessrights_CanAdd_{{$UserTypeAccessLevel->id}}' name = 'accessrights_CanAdd_{{$UserTypeAccessLevel->id}}' onclick="updateUserTypeAccess({{$UserTypeAccessLevel->id}});" type="checkbox"  {{($UserTypeAccessLevel->canadd) ? "checked" : ""}} >
+                                <input id = 'accessrights_CanAdd_{{$UserTypeAccessLevel->id}}' name = 'accessrights_CanAdd_{{$UserTypeAccessLevel->id}}' onchange="updateUserTypeAccess({{$UserTypeAccessLevel->id}});" type="checkbox"  {{($UserTypeAccessLevel->canadd) ? "checked" : ""}} >
                               </label>
                                 
                             </td>
                             <td>
                               <label>
-                                <input id = 'accessrights_CanSave_{{$UserTypeAccessLevel->id}}' name = 'accessrights_CanSave_{{$UserTypeAccessLevel->id}}' onclick="updateUserTypeAccess({{$UserTypeAccessLevel->id}});" type="checkbox"  {{($UserTypeAccessLevel->cansave) ? "checked" : ""}}>
+                                <input id = 'accessrights_CanSave_{{$UserTypeAccessLevel->id}}' name = 'accessrights_CanSave_{{$UserTypeAccessLevel->id}}' onchange="updateUserTypeAccess({{$UserTypeAccessLevel->id}});" type="checkbox"  {{($UserTypeAccessLevel->cansave) ? "checked" : ""}}>
                               </label>
                                 
                             </td>
                            
                             <td>
                               <label>
-                                <input id = 'accessrights_CanDelete_{{$UserTypeAccessLevel->id}}' name = 'accessrights_CanDelete_{{$UserTypeAccessLevel->id}}' onclick="updateUserTypeAccess({{$UserTypeAccessLevel->id}});" type="checkbox"  {{($UserTypeAccessLevel->candelete) ? "checked" : ""}}>
+                                <input id = 'accessrights_CanDelete_{{$UserTypeAccessLevel->id}}' name = 'accessrights_CanDelete_{{$UserTypeAccessLevel->id}}' onchange="updateUserTypeAccess({{$UserTypeAccessLevel->id}});" type="checkbox"  {{($UserTypeAccessLevel->candelete) ? "checked" : ""}}>
                               </label>
                                 
                             </td>
@@ -85,20 +85,20 @@
                             </td>
                             <td>
                               <label>
-                                <input id = 'accessrights_CanAdd_{{$UserTypeAccessLevel->id}}' name = 'accessrights_CanAdd_{{$UserTypeAccessLevel->id}}' disabled onclick="updateUserTypeAccess({{$UserTypeAccessLevel->id}});" type="checkbox"  {{($UserTypeAccessLevel->canadd) ? "checked" : ""}} >
+                                <input id = 'accessrights_CanAdd_{{$UserTypeAccessLevel->id}}' name = 'accessrights_CanAdd_{{$UserTypeAccessLevel->id}}' disabled onchange="updateUserTypeAccess({{$UserTypeAccessLevel->id}});" type="checkbox"  {{($UserTypeAccessLevel->canadd) ? "checked" : ""}} >
                               </label>
                                 
                             </td>
                             <td>
                               <label>
-                                <input id = 'accessrights_CanSave_{{$UserTypeAccessLevel->id}}' name = 'accessrights_CanSave_{{$UserTypeAccessLevel->id}}' disabled onclick="updateUserTypeAccess({{$UserTypeAccessLevel->id}});" type="checkbox"  {{($UserTypeAccessLevel->cansave) ? "checked" : ""}}>
+                                <input id = 'accessrights_CanSave_{{$UserTypeAccessLevel->id}}' name = 'accessrights_CanSave_{{$UserTypeAccessLevel->id}}' disabled onchange="updateUserTypeAccess({{$UserTypeAccessLevel->id}});" type="checkbox"  {{($UserTypeAccessLevel->cansave) ? "checked" : ""}}>
                               </label>
                                 
                             </td>
                            
                             <td>
                               <label>
-                                <input id = 'accessrights_CanDelete_{{$UserTypeAccessLevel->id}}' name = 'accessrights_CanDelete_{{$UserTypeAccessLevel->id}}' disabled onclick="updateUserTypeAccess({{$UserTypeAccessLevel->id}});" type="checkbox"  {{($UserTypeAccessLevel->candelete) ? "checked" : ""}}>
+                                <input id = 'accessrights_CanDelete_{{$UserTypeAccessLevel->id}}' name = 'accessrights_CanDelete_{{$UserTypeAccessLevel->id}}' disabled onchange="updateUserTypeAccess({{$UserTypeAccessLevel->id}});" type="checkbox"  {{($UserTypeAccessLevel->candelete) ? "checked" : ""}}>
                               </label>
                                 
                             </td>

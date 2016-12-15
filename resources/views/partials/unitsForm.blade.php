@@ -2,16 +2,16 @@
             <div class="form-horizontal">
 
               <div class="form-group">
-                <label for="inputEmail3" class="col-sm-4 control-label">Unit Number: </label>
-                <div class="col-sm-8">
+                <label for="inputEmail3" class="col-sm-2 control-label">Unit Number: </label>
+                <div class="col-sm-10">
 
                    <input required  type = 'text' class="form-control" name = 'unitCode' value = '{{$Model->unitCode}}' id='getUnits_unitCode'/>
                 </div>
               </div>
 
               <div class="form-group">
-                <label for="inputEmail3" class="col-sm-4 control-label">Property: </label>
-                <div class="col-sm-8">
+                <label for="inputEmail3" class="col-sm-2 control-label">Property: </label>
+                <div class="col-sm-10">
 
                    <select name = 'property' class = "form-control" class = "col-sm-8" required>
 					<option value = "">--Please Select--</option>
@@ -36,8 +36,8 @@
               </div>
 
               <div class="form-group">
-                <label for="inputEmail3" class="col-sm-4 control-label">Unit type: </label>
-                <div class="col-sm-8">
+                <label for="inputEmail3" class="col-sm-2 control-label">Unit type: </label>
+                <div class="col-sm-10">
 
                    <select name = 'unittype' class = "form-control" class = "col-sm-8" required>
 					<option value = "">--Please Select--</option>
