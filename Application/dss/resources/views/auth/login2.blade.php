@@ -4,6 +4,7 @@
   
   <!-- /.login-logo -->
   <div class="login-box-body">
+    <center><img src = "{{asset('images/image002.png')}}" /></center>
     <p class="login-box-msg">Sign in to start your session</p>
 
     <form class="form-horizontal" role="form" method="POST" action="{{ url('/login') }}">

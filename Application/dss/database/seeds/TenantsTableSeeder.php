@@ -12,26 +12,35 @@ class TenantsTableSeeder extends Seeder
     public function run()
     {
         //
-        DB::table('tenants')->insert([
-
+         DB::table('tenants')->insert([
             [
-	            
-	            'unittype' => '2BR'
-	            ,'unitnumber' => '1717'
-	            ,'startdate' => '2015-06-17'
-	            ,'noOfDeposits' => 11
-	            ,'noOfAdvance' => 6
-	            ,'totalDepositAmt' => 510000
-	            ,'unitBasicRent' => 30000
-	            ,'vat' => 0.12
-	            ,'whtax' => 0.12
-	            ,'lgwhtax' => 0.12
-	            ,'unittotalrent' => 540000
-	            ,'company_id' => 1
-	            ,'branch_id' => 1
-	           	,'tenantname' => 'Aurelio Rolando Talag'
-	            ,'company_id' => 1
+            'id' => 1,
+            'tenantname' => 'AR Talag',
+            'address' => 'Quezon City',
+            'telno' => '123-4567',
+            'mobileno' => '09150001000',
+            'occupation' => 'Lawyer',
+            'company_id' => 1,
+            'civilstatus' => 'single',
+            'lastname' => 'Talag',
+            'firstname' => 'Aurelio',
+            'middlename' => 'R'
             ]
+            ,
+            [
+            'id' => 2,
+            'tenantname' => 'Jonny Jacobs',
+            'address' => 'Quezon City',
+            'telno' => '123-4567',
+            'mobileno' => '09150001000',
+            'occupation' => 'Mechanical Engineer',
+            'company_id' => 1,
+            'civilstatus' => 'single',
+            'lastname' => 'Jacobs',
+            'firstname' => 'Jonny',
+            'middlename' => 'Qui'           ]
+            
         ]);
+
     }
 }

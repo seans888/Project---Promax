@@ -52,6 +52,10 @@ class CompanyController extends Controller
     public function getCompany($id){
         $data['Company'] = Company::find($id);
         $data['Companies'] = Company::where('id', Auth::user()->company_id)->orWhere('parent', Auth::user()->company_id)->get();
+        $data['canadd'] = Auth::user()->canAdd('company');
+        $data['cansave'] = Auth::user()->cansave('company');
+        $data['candelete'] = Auth::user()->candelete('company');
+
         return view('getCompany', $data);
     }
 

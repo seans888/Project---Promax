@@ -38,7 +38,7 @@ class UserController extends Controller
         $data['header'] = "List of users";
         $data['Model'] = User::where('company_id', Auth::user()->company_id)->get();
         $data['tablePartialView'] = "partials.userTable";
-        $data['canAdd'] = true;
+        $data['canAdd'] = Auth::user()->canAdd('users');
         $data['create'] = "/user/";
         return view('listview', $data);
     }
@@ -58,10 +58,18 @@ class UserController extends Controller
         $data['ModelURIlistview'] = "users";
         $company_id = Auth::user()->company_id;
         $data['formID'] = "formGetUser";
+
+        $data['canadd'] = Auth::user()->canAdd('users');
+        $data['cansave'] = Auth::user()->cansave('users');
+        $data['candelete'] = Auth::user()->candelete('users');
+
         $data['companies'] = Company::where('id' , $company_id)->orWhere('parent', $company_id)->get();
         return view('formView', $data);
     }
      public function newUser(){
+        if(Auth::user()->canAdd('users') == false || Auth::user()->canAdd('users') == 0){
+            return $this->users();
+        }
         $data['Model'] = new user();
         $data['ModelURI'] = "user";
         $data['ModelIDnew'] = "getuser_new";
@@ -73,6 +81,11 @@ $data['create'] = "/user/";
         $data['ModelURIlistview'] = "users";
         $company_id = Auth::user()->company_id;
         $data['formID'] = "formGetUser";
+
+        $data['canadd'] = Auth::user()->canAdd('users');
+        $data['cansave'] = Auth::user()->cansave('users');
+        $data['candelete'] = Auth::user()->candelete('users');
+
         $data['companies'] = Company::where('id' , $company_id)->orWhere('parent', $company_id)->get();
         return view('formView', $data);
     }
@@ -120,6 +133,9 @@ $data['create'] = "/user/";
         $user = User::where('id', $id)->where('company_id', Auth::user()->company_id)->first();
         $user->delete();
         $affirmationMessage = "user deleted successfully!";
+        if($user->id == Auth::user()->id){
+            return redirect("/logout");
+        }
         return redirect('/user/')->with('affirm', $affirmationMessage);
     } 
     public function deleteUserByUsername($username){

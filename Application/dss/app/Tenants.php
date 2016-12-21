@@ -8,5 +8,4 @@ class Tenants extends Model
 {
     //
     protected $table = 'tenants';
-
 }

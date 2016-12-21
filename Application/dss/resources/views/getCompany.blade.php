@@ -40,8 +40,9 @@
           <div class="box-header with-border">
             <div class="btn-group">
               <button type="reset" class="btn btn-default"><i class="fa fa-refresh"></i></button>
-            
+              @if($cansave)
               <button type="submit" class="btn btn-default"><i class="fa fa-save"></i></button>
+              @endif
                <a href = "/company"  class="btn btn-default"><i class="fa fa-list"></i></a>
             </div>
           </div>

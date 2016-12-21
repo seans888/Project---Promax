@@ -2,67 +2,113 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests;
 use Illuminate\Http\Request;
-use App\Notifications;
+
+use App\Http\Requests;
 use Auth;
-use App\Strings;
-use App\Company;
-use Illuminate\Http\Response;
-use Hash;
-use App\Branch;
-use App\Employee;
-use App\Tenants;
+use App\TenantS;
+use App\Property;
+use App\Unit;
 class TenantController extends Controller
 {
     //
-     public function __construct()
-    {
-        $this->middleware('auth');
+    public function Tenantlist(){
+        $data['title'] = "Tenant Information";
+        $data['header'] = "List of Tenants";
+        $data['Model'] = Tenants::where('company_id', Auth::user()->company_id)->get();
+        $data['tablePartialView'] = "partials.TenantTable";
+        $data['canAdd'] = Auth::user()->canAdd('Tenant');
+        $data['create'] = "/tenant/new";
 
+        return view('listview', $data);
     }
-    public function deletetenant($id){
+    public function getTenant($id){
+         $Tenant = Tenants::where('id', $id)->where('company_id', Auth::user()->company_id)->first();
+        if($Tenant == null){
+            return redirect('/tenant/list/');
+        }
+        $data['Model'] = $Tenant;
+        $data['ModelURI'] = "Tenant";
+        $data['ModelIDnew'] = "getTenant_new";
+        $data['ModelIDdelete'] = "getTenant_delete";
+        $data['title'] = "Tenant";
+        $data['formViewPartial'] = "partials.TenantForm";
+        $data['ModelURIlistview'] = "tenant/list";
+        $company_id = auth::user()->company_id;
+        $data['formID'] = "formGetTenant";
+        $data['create'] = "/tenant/new";
 
-    	$tenant = Tenants::where('id', $id)->where('company_id', Auth::user()->company_id)->first();
-    	$branchId = $tenant->branch_id;
-    	$tenant->delete();
-    	return redirect("/project/" . $branchId)->with('affirm2', 'Tenant deleted successfully!');
+        $data['canadd'] = Auth::user()->canAdd('Tenant');
+        $data['cansave'] = Auth::user()->cansave('Tenant');
+        $data['candelete'] = Auth::user()->candelete('Tenant');
+
+        $data['properties'] = Property::where('company_id', Auth::user()->company_id)->get();
+        $data['units'] = Unit::where('company_id', Auth::user()->company_id)->get();
+        return view('formView2', $data);
     }
-    public function posttenant(Request $request = null, $id){
-    	 $this->validate($request, [
-            'unittype' => 'required'
-            ,'unitnumber' => 'required'
-            ,'startdate' =>'required'
-            ,'tenantname' => 'required'
-            
-        ]);
-    	if($request->has('tenant_id') == false){
-	    	$Tenant = new Tenants();
-	    	$affirmationMessage = "Tenant created successfully!";
-		}
-		else{
-			$Tenant = Tenants::where('id', $request->tenant_id)->where('company_id', Auth::user()->company_id)->first();
-	    	$affirmationMessage = "Tenant updated successfully!";
-		}
-        $Tenant->unittype = $request->unittype;
+     public function newTenant(Request $request){
+         $Tenant = new Tenants();
+        
+        $data['Model'] = $Tenant;
+        $data['ModelURI'] = "Tenant";
+        $data['ModelIDnew'] = "getTenant_new";
+        $data['ModelIDdelete'] = "getTenant_delete";
+        $data['title'] = "Tenant";
+        $data['formViewPartial'] = "partials.TenantForm";
+        $data['ModelURIlistview'] = "tenant/list";
+        $company_id = auth::user()->company_id;
+        $data['formID'] = "formgetTenant";
+        $data['create'] = "/tenant/new";
+
+        $data['canadd'] = Auth::user()->canAdd('Tenant');
+        $data['cansave'] = Auth::user()->cansave('Tenant');
+        $data['candelete'] = Auth::user()->candelete('Tenant');
+
+
+        if(Auth::user()->canAdd('Tenant') == false || Auth::user()->canAdd('Tenant') == 0){
+            return $this->Tenantlist();
+        }
+        $data['Model'] = $Tenant;
+        $data['properties'] = Property::where('company_id', Auth::user()->company_id)->get();
+        return view('formView2', $data);
+    }
+    public function postTenant(Request $request = null, $id = null){
+        
+        $Tenant = new Tenants();
+        $affirmationMessage = "Tenant created successfully!";
+        if($request->has('id') && $request->id != null){
+            $Tenant = Tenants::where('id', $request->id)->where('company_id', Auth::user()->company_id)->first();
+            if($Tenant){
+                
+                $affirmationMessage = "Tenant updated successfully!";
+            } else{
+                //putting new user code results in "add" function
+                $Tenant = new Tenants();
+                $affirmationMessage = "Tenant created successfully!";
+            }
+        }
         $Tenant->tenantname = $request->tenantname;
-        $Tenant->unitnumber = $request->unitnumber;
-        $Tenant->startdate = $request->startdate;
-        $Tenant->enddate = $request->enddate;
-		$Tenant->noOfDeposits = $request->noOfDeposits;
-		$Tenant->noOfAdvance = $request->noOfAdvance;
-		$Tenant->totalDepositAmt = $request->totalDepositAmt;
-		$Tenant->unitBasicRent = $request->unitBasicRent;
-		$Tenant->vat = $request->vat;
-		$Tenant->whtax = $request->whtax;
-		$Tenant->lgwhtax = $request->lgwhtax;
-		$Tenant->unittotalrent = $request->unittotalrent;
-		$Tenant->unittotalrent = $request->unittotalrent;
+        $Tenant->address = $request->address;
+        $Tenant->telno = $request->telno;
+        $Tenant->mobileno = $request->mobileno;
+        $Tenant->occupation = $request->occupation;
+        $Tenant->civilstatus = $request->civilstatus;
         
-        $Tenant->branch_id = $id;
+        $Tenant->lastname = $request->lastname;
+        $Tenant->middlename = $request->middlename;
+        $Tenant->firstname = $request->firstname;
+        
+        
+
         $Tenant->company_id = Auth::user()->company_id;
-        
         $Tenant->save();
-        return redirect('/project/' . $Tenant->branch_id)->with('affirm2', $affirmationMessage);
+        
+        return redirect('/tenant/get/' . $Tenant->id)->with('affirm', $affirmationMessage);
+    }
+    public function deleteTenant(Request $request, $id){
+        $Tenant = Tenants::where('id', $id)->where('company_id', Auth::user()->company_id)->first();
+        $Tenant->delete();
+        $affirmationMessage = "Tenant deleted successfully!";
+        return redirect('/tenant/list/')->with('affirm', $affirmationMessage);
     }
 }
