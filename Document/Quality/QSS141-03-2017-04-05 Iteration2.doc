@@ -1,0 +1,1230 @@
+<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.01 Transitional//EN'>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>testreport_onbuild Iteration 1 Test Plan</title>
+<link type="text/css" rel="stylesheet" href="http://gnuhealth.ioss.com.ph/testlink/gui/themes/default/css/tl_documents.css" />
+<style type="text/css" media="print">.notprintable { display:none;}</style>
+</head>
+<body>
+<div>
+<div style="float:right;">TestLink Community [configure $tlCfg-&gt;document_generator-&gt;company_name]</div>
+<div>&nbsp;</div><hr />
+<p style="text-align: center;"><img alt="TestLink logo" title="configure using $tlCfg->document_generator->company_logo" height="53" src="http://gnuhealth.ioss.com.ph/testlink/gui/themes/default/images/tl-logo-transparent-25.png" /></div>
+<div class="doc_title"><p>Test Plan Execution Report (on specific build)</p></div>
+<div class="doc_title" style="text-align:left;margin: auto;"><p>Test Project: 2017-3-T-Q-ss141-03<br>Test Plan: Iteration 1 Test Plan<br>Build: Iteration2</p></div>
+<div class="summary"><p id="printedby">Printed by TestLink on 05/04/2017</p></div>
+<div class="pagefooter" id="copyright">2012 &copy; TestLink Community</div>
+<h1 class='doclevel'>Test Suite : Interface Interaction</h1>
+<h1 class='doclevel'>Test Suite : User</h1>
+<h2 class='doclevel'>Test Suite : Homepage</h2>
+<p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="5">Test Case QSS141-03-11: User Registration (Without Content)</th></tr>
+<tr><td colspan="5"><span class="label">Summary:</span><br /><p>
+	The user will enter the required information for the registration such as username,etc.</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td><td><span class="label">Execution Status:</span></td></tr><tr><td width="5">1</td><td><p>
+	User leaves the username field blank while the user inputs the correct email and password.</p>
+</td><td><p>
+	<span style="font-family: &quot;Trebuchet MS&quot;, Arial, Verdana, sans-serif; font-size: 11.7px; background-color: rgb(238, 238, 238);">Displays text being inputted in the username,password and email&nbsp;</span><span style="background-color: rgb(238, 238, 238); font-family: &quot;Trebuchet MS&quot;, Arial, Verdana, sans-serif; font-size: 11.7px;">text box.</span></p>
+</td><td>Passed</td></tr><tr><td width="5">2</td><td><p>
+	User clicks the sign up button.</p>
+</td><td><p>
+	<span style="font-family: &quot;Trebuchet MS&quot;, Arial, Verdana, sans-serif; font-size: 11.7px; background-color: rgb(238, 238, 238);">System will display message&nbsp;</span><strong style="font-family: &quot;Trebuchet MS&quot;, Arial, Verdana, sans-serif; font-size: 11.7px; background-color: rgb(238, 238, 238);">(EM01)</strong></p>
+</td><td>Passed</td></tr><tr><td width="5">3</td><td><p>
+	User leaves the email field blank while the user inputs the correct username and password.</p>
+</td><td><p>
+	Displays text being input in the username,password and email text box.</p>
+</td><td>Passed</td></tr><tr><td width="5">4</td><td><p>
+	User clicks the sign up button.</p>
+</td><td><p>
+	<span style="font-family: &quot;Trebuchet MS&quot;, Arial, Verdana, sans-serif; font-size: 11.7px; background-color: rgb(238, 238, 238);">System will display message&nbsp;</span><strong style="font-family: &quot;Trebuchet MS&quot;, Arial, Verdana, sans-serif; font-size: 11.7px; background-color: rgb(238, 238, 238);">(EM01)</strong></p>
+</td><td>Passed</td></tr><tr><td width="5">5</td><td><p>
+	User leaves the password field blank while the user inputs the correct username and password</p>
+</td><td><p>
+	Displays text being input in the username and email text box.</p>
+</td><td>Passed</td></tr><tr><td width="5">6</td><td><p>
+	User clicks the sign up button.</p>
+</td><td><p>
+	System will display message (EM01)</p>
+</td><td>Passed</td></tr><tr><td width="5">7</td><td><p>
+	User leaves all the required fields blank</p>
+</td><td><p>
+	Displays text being input in the username,password and email text box.</p>
+</td><td>Passed</td></tr><tr><td width="5">8</td><td><p>
+	User clicks the sign up button.</p>
+</td><td><p>
+	System will display message (EM01)</p>
+</td><td></td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="4">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="4"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Priority:</span></td><td colspan="4">Medium</td></tr>
+<tr><td colspan="5"></td></tr><tr style="font-weight: bold;background: #EEE;text-align: left;"><td width="20%" valign="top">Execution Details</td><td colspan="4">&nbsp;</b></td></tr>
+<tr><td width="20%" valign="top">Build</td><td 4>Iteration2</b></td></tr>
+<tr><td width="20%" valign="top">Tester</td><td  colspan="4" >dforibiana</b></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Execution Result:</span></td><td  colspan="4" ><b>Passed</b></td></tr>
+<tr><td width="20%"><span class="label">Execution Mode:</span></td><td  colspan="4" ><b>Manual</b></td></tr>
+<tr><td width="20%"><span class="label">Execution duration (min):</span></td><td  colspan="4" ><b>&nbsp;</b></td></tr>
+</table>
+</div>
+<p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="5">Test Case QSS141-03-12: User Registration (With Content)</th></tr>
+<tr><td colspan="5"><span class="label">Summary:</span><br /><p>
+	User enters the required information in each certain field such as username,email,password.</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td><td><span class="label">Execution Status:</span></td></tr><tr><td width="5">1</td><td><p>
+	User inputs incorrect email and correct username and password.</p>
+</td><td><p>
+	<span style="font-family: &quot;Trebuchet MS&quot;, Arial, Verdana, sans-serif; font-size: 11.7px; background-color: rgb(238, 238, 238);">Displays text being inputted in the email,username and password text box</span></p>
+</td><td>Passed</td></tr><tr><td width="5">2</td><td><p>
+	User clicks the sign up button.</p>
+</td><td><p>
+	<span style="font-family: &quot;Trebuchet MS&quot;, Arial, Verdana, sans-serif; font-size: 11.7px; background-color: rgb(238, 238, 238);">System displays user timeline</span></p>
+</td><td>Passed</td></tr><tr><td width="5">3</td><td><p>
+	User inputs single character text each for email,username and password.</p>
+</td><td><p>
+	Displays text being inputted in the email,username and password text box</p>
+</td><td>Passed</td></tr><tr><td width="5">4</td><td><p>
+	User clicks the sign up button</p>
+</td><td><p>
+	System displays user timeline.</p>
+</td><td>Passed</td></tr><tr><td width="5">5</td><td><p>
+	User inputs numeric text for each email,username and password field.</p>
+</td><td><p>
+	Displays text being input in the email,username and password text box.</p>
+</td><td>Passed</td></tr><tr><td width="5">6</td><td><p>
+	User clicks the sign up button</p>
+</td><td><p>
+	System displays user timeline</p>
+</td><td>Passed</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="4">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="4"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Priority:</span></td><td colspan="4">Medium</td></tr>
+<tr><td colspan="5"></td></tr><tr style="font-weight: bold;background: #EEE;text-align: left;"><td width="20%" valign="top">Execution Details</td><td colspan="4">&nbsp;</b></td></tr>
+<tr><td width="20%" valign="top">Build</td><td 4>Iteration2</b></td></tr>
+<tr><td width="20%" valign="top">Tester</td><td  colspan="4" >dforibiana</b></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Execution Result:</span></td><td  colspan="4" ><b>Passed</b></td></tr>
+<tr><td width="20%"><span class="label">Execution Mode:</span></td><td  colspan="4" ><b>Manual</b></td></tr>
+<tr><td width="20%"><span class="label">Execution duration (min):</span></td><td  colspan="4" ><b>&nbsp;</b></td></tr>
+</table>
+</div>
+<p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="5">Test Case QSS141-03-13: User Authentication (Existing Account)</th></tr>
+<tr><td colspan="5"><span class="label">Summary:</span><br /><p>
+	User tries to verify if an account is already existing or not.</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td><td><span class="label">Execution Status:</span></td></tr><tr><td width="5">1</td><td><p>
+	User types username or email that is already existing.</p>
+</td><td><p>
+	Textbox shows the text entered in the fields.</p>
+</td><td>Passed</td></tr><tr><td width="5">2</td><td><p>
+	User clicks sign up button.</p>
+</td><td><p>
+	<span style="font-family: &quot;Trebuchet MS&quot;, Arial, Verdana, sans-serif; font-size: 11.7px; background-color: rgb(238, 238, 238);">System will display message</span><strong style="font-family: &quot;Trebuchet MS&quot;, Arial, Verdana, sans-serif; font-size: 11.7px; background-color: rgb(238, 238, 238);">&nbsp;(EM03)</strong></p>
+</td><td>Passed</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="4">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="4"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Priority:</span></td><td colspan="4">Medium</td></tr>
+<tr><td colspan="5"></td></tr><tr style="font-weight: bold;background: #EEE;text-align: left;"><td width="20%" valign="top">Execution Details</td><td colspan="4">&nbsp;</b></td></tr>
+<tr><td width="20%" valign="top">Build</td><td 4>Iteration2</b></td></tr>
+<tr><td width="20%" valign="top">Tester</td><td  colspan="4" >dforibiana</b></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Execution Result:</span></td><td  colspan="4" ><b>Passed</b></td></tr>
+<tr><td width="20%"><span class="label">Execution Mode:</span></td><td  colspan="4" ><b>Manual</b></td></tr>
+<tr><td width="20%"><span class="label">Execution duration (min):</span></td><td  colspan="4" ><b>&nbsp;</b></td></tr>
+<tr><td width="20%" valign="top">Execution notes</td><td  colspan="4" >The expected results were met</td></tr>
+</table>
+</div>
+<p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="5">Test Case QSS141-03-14: User Visits the Web Application Url(Correct Spelling)</th></tr>
+<tr><td colspan="5"><span class="label">Summary:</span><br /><p>
+	User will visit the Web Application URL by typing the URL Link</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td><td><span class="label">Execution Status:</span></td></tr><tr><td width="5">1</td><td><p>
+	<span style="font-family: &quot;Trebuchet MS&quot;, Arial, Verdana, sans-serif; font-size: 11.7px; background-color: rgb(238, 238, 238);">User types the URL link</span></p>
+</td><td></td><td>Passed</td></tr><tr><td width="5">2</td><td><p>
+	User hits Enter</p>
+</td><td><p style="font-family: &quot;Trebuchet MS&quot;, Arial, Verdana, sans-serif; font-size: 11.7px; background-color: rgb(238, 238, 238);">
+	System will load&nbsp;<span style="font-size: 11.7px;">and will display the front view of the URL link</span></p>
+</td><td>Passed</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="4">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="4"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Priority:</span></td><td colspan="4">Medium</td></tr>
+<tr><td colspan="5"></td></tr><tr style="font-weight: bold;background: #EEE;text-align: left;"><td width="20%" valign="top">Execution Details</td><td colspan="4">&nbsp;</b></td></tr>
+<tr><td width="20%" valign="top">Build</td><td 4>Iteration2</b></td></tr>
+<tr><td width="20%" valign="top">Tester</td><td  colspan="4" >dforibiana</b></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Execution Result:</span></td><td  colspan="4" ><b>Passed</b></td></tr>
+<tr><td width="20%"><span class="label">Execution Mode:</span></td><td  colspan="4" ><b>Manual</b></td></tr>
+<tr><td width="20%"><span class="label">Execution duration (min):</span></td><td  colspan="4" ><b>&nbsp;</b></td></tr>
+<tr><td width="20%" valign="top">Execution notes</td><td  colspan="4" >The results were met in each steps</td></tr>
+</table>
+</div>
+<p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="5">Test Case QSS141-03-15: User Visites the Web Application URL (Incorrect Spelling)</th></tr>
+<tr><td colspan="5"><span class="label">Summary:</span><br /><p>
+	User types web application URL incorrectly.</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td><td><span class="label">Execution Status:</span></td></tr><tr><td width="5">1</td><td><p>
+	<span style="font-family: &quot;Trebuchet MS&quot;, Arial, Verdana, sans-serif; font-size: 11.7px; background-color: rgb(238, 238, 238);">&nbsp;User misspelled the web application URL link</span></p>
+</td><td><p>
+	<span style="font-family: &quot;Trebuchet MS&quot;, Arial, Verdana, sans-serif; font-size: 11.7px; background-color: rgb(238, 238, 238);">Will not redirect it to the web application</span></p>
+</td><td>Passed</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="4">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="4"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Priority:</span></td><td colspan="4">Medium</td></tr>
+<tr><td colspan="5"></td></tr><tr style="font-weight: bold;background: #EEE;text-align: left;"><td width="20%" valign="top">Execution Details</td><td colspan="4">&nbsp;</b></td></tr>
+<tr><td width="20%" valign="top">Build</td><td 4>Iteration2</b></td></tr>
+<tr><td width="20%" valign="top">Tester</td><td  colspan="4" >dforibiana</b></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Execution Result:</span></td><td  colspan="4" ><b>Passed</b></td></tr>
+<tr><td width="20%"><span class="label">Execution Mode:</span></td><td  colspan="4" ><b>Manual</b></td></tr>
+<tr><td width="20%"><span class="label">Execution duration (min):</span></td><td  colspan="4" ><b>&nbsp;</b></td></tr>
+</table>
+</div>
+<h2 class='doclevel'>Test Suite : Timeline</h2>
+<p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="5">Test Case QSS141-03-16: User Suscribes to another User</th></tr>
+<tr><td colspan="5"><span class="label">Summary:</span><br /><p>
+	User suscribes to another user of his/her choice</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td><td><span class="label">Execution Status:</span></td></tr><tr><td width="5">1</td><td><p>
+	Access list of recommended user</p>
+</td><td><p>
+	Displays list of recommended users</p>
+</td><td>Passed</td></tr><tr><td width="5">2</td><td><p>
+	Press Suscribe</p>
+</td><td><p>
+	User is suscribed to target user</p>
+</td><td>Passed</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="4">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="4"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Priority:</span></td><td colspan="4">Medium</td></tr>
+<tr><td colspan="5"></td></tr><tr style="font-weight: bold;background: #EEE;text-align: left;"><td width="20%" valign="top">Execution Details</td><td colspan="4">&nbsp;</b></td></tr>
+<tr><td width="20%" valign="top">Build</td><td 4>Iteration2</b></td></tr>
+<tr><td width="20%" valign="top">Tester</td><td  colspan="4" >vpserrano</b></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Execution Result:</span></td><td  colspan="4" ><b>Passed</b></td></tr>
+<tr><td width="20%"><span class="label">Execution Mode:</span></td><td  colspan="4" ><b>Manual</b></td></tr>
+<tr><td width="20%"><span class="label">Execution duration (min):</span></td><td  colspan="4" ><b>1.00</b></td></tr>
+</table>
+</div>
+<p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="5">Test Case QSS141-03-17: Visit another account (Click)</th></tr>
+<tr><td colspan="5"><span class="label">Summary:</span><br /><p>
+	Visiting another account by clicking a currently available profile</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td><td><span class="label">Execution Status:</span></td></tr><tr><td width="5">1</td><td><p>
+	Click another User</p>
+</td><td><p>
+	Displays target User Profile page</p>
+</td><td>Passed</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="4">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="4"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Priority:</span></td><td colspan="4">Medium</td></tr>
+<tr><td colspan="5"></td></tr><tr style="font-weight: bold;background: #EEE;text-align: left;"><td width="20%" valign="top">Execution Details</td><td colspan="4">&nbsp;</b></td></tr>
+<tr><td width="20%" valign="top">Build</td><td 4>Iteration2</b></td></tr>
+<tr><td width="20%" valign="top">Tester</td><td  colspan="4" >vpserrano</b></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Execution Result:</span></td><td  colspan="4" ><b>Passed</b></td></tr>
+<tr><td width="20%"><span class="label">Execution Mode:</span></td><td  colspan="4" ><b>Manual</b></td></tr>
+<tr><td width="20%"><span class="label">Execution duration (min):</span></td><td  colspan="4" ><b>1.00</b></td></tr>
+</table>
+</div>
+<p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="5">Test Case QSS141-03-19: Visiting another user profie page (Search)</th></tr>
+<tr><td colspan="5"><span class="label">Summary:</span><br /><p>
+	Acessing another users profile page through the search bar</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td><td><span class="label">Execution Status:</span></td></tr><tr><td width="5">1</td><td><p>
+	Type name of target user in search bar</p>
+</td><td><p>
+	Display matching target users</p>
+</td><td>Passed</td></tr><tr><td width="5">2</td><td><p>
+	Click user that matches search</p>
+</td><td><p>
+	Display profile page of the user clicked</p>
+</td><td>Passed</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="4">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="4"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Priority:</span></td><td colspan="4">Medium</td></tr>
+<tr><td colspan="5"></td></tr><tr style="font-weight: bold;background: #EEE;text-align: left;"><td width="20%" valign="top">Execution Details</td><td colspan="4">&nbsp;</b></td></tr>
+<tr><td width="20%" valign="top">Build</td><td 4>Iteration2</b></td></tr>
+<tr><td width="20%" valign="top">Tester</td><td  colspan="4" >vpserrano</b></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Execution Result:</span></td><td  colspan="4" ><b>Passed</b></td></tr>
+<tr><td width="20%"><span class="label">Execution Mode:</span></td><td  colspan="4" ><b>Manual</b></td></tr>
+<tr><td width="20%"><span class="label">Execution duration (min):</span></td><td  colspan="4" ><b>1.00</b></td></tr>
+</table>
+</div>
+<p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="5">Test Case QSS141-03-26: Visiting another user profile page (Search-Click another user with similar search credentials)</th></tr>
+<tr><td colspan="5"><span class="label">Summary:</span><br /><p>
+	Search for user where you select a different user with similar credentials</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td><td><span class="label">Execution Status:</span></td></tr><tr><td width="5">1</td><td><p>
+	input search credentials</p>
+</td><td><p>
+	Display matching results</p>
+</td><td>Passed</td></tr><tr><td width="5">2</td><td><p>
+	Click a user different from the original target user</p>
+</td><td><p>
+	Displays the profile page of the user selected</p>
+</td><td>Passed</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="4">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="4"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Priority:</span></td><td colspan="4">Medium</td></tr>
+<tr><td colspan="5"></td></tr><tr style="font-weight: bold;background: #EEE;text-align: left;"><td width="20%" valign="top">Execution Details</td><td colspan="4">&nbsp;</b></td></tr>
+<tr><td width="20%" valign="top">Build</td><td 4>Iteration2</b></td></tr>
+<tr><td width="20%" valign="top">Tester</td><td  colspan="4" >vpserrano</b></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Execution Result:</span></td><td  colspan="4" ><b>Passed</b></td></tr>
+<tr><td width="20%"><span class="label">Execution Mode:</span></td><td  colspan="4" ><b>Manual</b></td></tr>
+<tr><td width="20%"><span class="label">Execution duration (min):</span></td><td  colspan="4" ><b>1.00</b></td></tr>
+</table>
+</div>
+<p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="5">Test Case QSS141-03-30: Send friend request (click)</th></tr>
+<tr><td colspan="5"><span class="label">Summary:</span><br /><p>
+	sending friend request to a user that is currently on the system list (not search)</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td><td><span class="label">Execution Status:</span></td></tr><tr><td width="5">1</td><td><p>
+	Click send friend request button</p>
+</td><td><p>
+	Friend request Notification</p>
+</td><td>Passed</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="4">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="4"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Priority:</span></td><td colspan="4">Medium</td></tr>
+<tr><td colspan="5"></td></tr><tr style="font-weight: bold;background: #EEE;text-align: left;"><td width="20%" valign="top">Execution Details</td><td colspan="4">&nbsp;</b></td></tr>
+<tr><td width="20%" valign="top">Build</td><td 4>Iteration2</b></td></tr>
+<tr><td width="20%" valign="top">Tester</td><td  colspan="4" >vpserrano</b></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Execution Result:</span></td><td  colspan="4" ><b>Passed</b></td></tr>
+<tr><td width="20%"><span class="label">Execution Mode:</span></td><td  colspan="4" ><b>Manual</b></td></tr>
+<tr><td width="20%"><span class="label">Execution duration (min):</span></td><td  colspan="4" ><b>1.00</b></td></tr>
+</table>
+</div>
+<p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="5">Test Case QSS141-03-44: Send Friend Request (Search)</th></tr>
+<tr><td colspan="5"><span class="label">Summary:</span><br /><p>
+	Sending friend request to user found through search</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td><td><span class="label">Execution Status:</span></td></tr><tr><td width="5">1</td><td><p>
+	Click Send friend request</p>
+</td><td><p>
+	Sent friend request notification</p>
+</td><td>Passed</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="4">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="4"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Priority:</span></td><td colspan="4">Medium</td></tr>
+<tr><td colspan="5"></td></tr><tr style="font-weight: bold;background: #EEE;text-align: left;"><td width="20%" valign="top">Execution Details</td><td colspan="4">&nbsp;</b></td></tr>
+<tr><td width="20%" valign="top">Build</td><td 4>Iteration2</b></td></tr>
+<tr><td width="20%" valign="top">Tester</td><td  colspan="4" >vpserrano</b></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Execution Result:</span></td><td  colspan="4" ><b>Passed</b></td></tr>
+<tr><td width="20%"><span class="label">Execution Mode:</span></td><td  colspan="4" ><b>Manual</b></td></tr>
+<tr><td width="20%"><span class="label">Execution duration (min):</span></td><td  colspan="4" ><b>1.00</b></td></tr>
+</table>
+</div>
+<p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="5">Test Case QSS141-03-45: Accept friend request(accept)</th></tr>
+<tr><td colspan="5"><span class="label">Summary:</span><br /><p>
+	Accepting friend request</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td><td><span class="label">Execution Status:</span></td></tr><tr><td width="5">1</td><td><p>
+	Open friend request list</p>
+</td><td><p>
+	Display frend request list</p>
+</td><td>Passed</td></tr><tr><td width="5">2</td><td><p>
+	Click request to respond to</p>
+</td><td><p>
+	Display friend request</p>
+</td><td>Passed</td></tr><tr><td width="5">3</td><td><p>
+	Click accept</p>
+</td><td><p>
+	Friend request is accepted and recorded in system</p>
+</td><td>Passed</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="4">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="4"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Priority:</span></td><td colspan="4">Medium</td></tr>
+<tr><td colspan="5"></td></tr><tr style="font-weight: bold;background: #EEE;text-align: left;"><td width="20%" valign="top">Execution Details</td><td colspan="4">&nbsp;</b></td></tr>
+<tr><td width="20%" valign="top">Build</td><td 4>Iteration2</b></td></tr>
+<tr><td width="20%" valign="top">Tester</td><td  colspan="4" >vpserrano</b></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Execution Result:</span></td><td  colspan="4" ><b>Passed</b></td></tr>
+<tr><td width="20%"><span class="label">Execution Mode:</span></td><td  colspan="4" ><b>Manual</b></td></tr>
+<tr><td width="20%"><span class="label">Execution duration (min):</span></td><td  colspan="4" ><b>2.00</b></td></tr>
+</table>
+</div>
+<p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="5">Test Case QSS141-03-46: Accept friend request(decline)</th></tr>
+<tr><td colspan="5"><span class="label">Summary:</span><br /><p>
+	Declining a friend request</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td><td><span class="label">Execution Status:</span></td></tr><tr><td width="5">1</td><td><p>
+	Open Friend request list</p>
+</td><td><p>
+	Display friend request list</p>
+</td><td>Passed</td></tr><tr><td width="5">2</td><td><p>
+	Click request to respond to</p>
+</td><td><p>
+	Displays friend request response page</p>
+</td><td>Passed</td></tr><tr><td width="5">3</td><td><p>
+	Click decline</p>
+</td><td><p>
+	Friend request is declined</p>
+</td><td>Passed</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="4">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="4"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Priority:</span></td><td colspan="4">Medium</td></tr>
+<tr><td colspan="5"></td></tr><tr style="font-weight: bold;background: #EEE;text-align: left;"><td width="20%" valign="top">Execution Details</td><td colspan="4">&nbsp;</b></td></tr>
+<tr><td width="20%" valign="top">Build</td><td 4>Iteration2</b></td></tr>
+<tr><td width="20%" valign="top">Tester</td><td  colspan="4" >vpserrano</b></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Execution Result:</span></td><td  colspan="4" ><b>Passed</b></td></tr>
+<tr><td width="20%"><span class="label">Execution Mode:</span></td><td  colspan="4" ><b>Manual</b></td></tr>
+<tr><td width="20%"><span class="label">Execution duration (min):</span></td><td  colspan="4" ><b>1.00</b></td></tr>
+</table>
+</div>
+<h2 class='doclevel'>Test Suite : Profile</h2>
+<p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="5">Test Case QSS141-03-18: User updates his/her profile information(changes saved)</th></tr>
+<tr><td colspan="5"><span class="label">Summary:</span><br /><p>
+	User edited his/her profile credentials</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td><td><span class="label">Execution Status:</span></td></tr><tr><td width="5">1</td><td><p>
+	The user clicks profile settings in navigation bar</p>
+</td><td><p>
+	displays profile settings</p>
+</td><td>Passed</td></tr><tr><td width="5">2</td><td><p>
+	User inputs profile credentials</p>
+</td><td><p>
+	The system displays profile credentials</p>
+</td><td>Passed</td></tr><tr><td width="5">3</td><td><p>
+	User clicks &quot;save changes&quot;</p>
+</td><td><p>
+	System updates the profile credentials of user</p>
+</td><td>Passed</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="4">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="4"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Priority:</span></td><td colspan="4">Medium</td></tr>
+<tr><td colspan="5"></td></tr><tr style="font-weight: bold;background: #EEE;text-align: left;"><td width="20%" valign="top">Execution Details</td><td colspan="4">&nbsp;</b></td></tr>
+<tr><td width="20%" valign="top">Build</td><td 4>Iteration2</b></td></tr>
+<tr><td width="20%" valign="top">Tester</td><td  colspan="4" >dforibiana</b></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Execution Result:</span></td><td  colspan="4" ><b>Passed</b></td></tr>
+<tr><td width="20%"><span class="label">Execution Mode:</span></td><td  colspan="4" ><b>Manual</b></td></tr>
+<tr><td width="20%"><span class="label">Execution duration (min):</span></td><td  colspan="4" ><b>&nbsp;</b></td></tr>
+<tr><td width="20%" valign="top">Execution notes</td><td  colspan="4" >Every result was met in each steps</td></tr>
+</table>
+</div>
+<p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="5">Test Case QSS141-03-21: User updates his/her profile information(changes not saved)</th></tr>
+<tr><td colspan="5"><span class="label">Summary:</span><br /><p>
+	User updates his/her profile credentials but did not saved</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td><td><span class="label">Execution Status:</span></td></tr><tr><td width="5">1</td><td><p>
+	The user clicks profile settings in navigation bar</p>
+</td><td><p>
+	the system displays profile settings</p>
+</td><td>Passed</td></tr><tr><td width="5">2</td><td><p>
+	The user input his/her profile credentials</p>
+</td><td><p>
+	the system displays the profile credentials</p>
+</td><td>Passed</td></tr><tr><td width="5">3</td><td><p>
+	The user immediately closed the profile settings</p>
+</td><td><p>
+	the system did not update the changes</p>
+</td><td>Passed</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="4">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="4"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Priority:</span></td><td colspan="4">Medium</td></tr>
+<tr><td colspan="5"></td></tr><tr style="font-weight: bold;background: #EEE;text-align: left;"><td width="20%" valign="top">Execution Details</td><td colspan="4">&nbsp;</b></td></tr>
+<tr><td width="20%" valign="top">Build</td><td 4>Iteration2</b></td></tr>
+<tr><td width="20%" valign="top">Tester</td><td  colspan="4" >dforibiana</b></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Execution Result:</span></td><td  colspan="4" ><b>Passed</b></td></tr>
+<tr><td width="20%"><span class="label">Execution Mode:</span></td><td  colspan="4" ><b>Manual</b></td></tr>
+<tr><td width="20%"><span class="label">Execution duration (min):</span></td><td  colspan="4" ><b>&nbsp;</b></td></tr>
+<tr><td width="20%" valign="top">Execution notes</td><td  colspan="4" >The main goal of the test was met which was changes will not be saved when the user immediately closed the profile settings.</td></tr>
+</table>
+</div>
+<p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="5">Test Case QSS141-03-23: User views his/her profile</th></tr>
+<tr><td colspan="5"><span class="label">Summary:</span><br /><p>
+	The user views his/her profile&nbsp;</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td><td><span class="label">Execution Status:</span></td></tr><tr><td width="5">1</td><td><p>
+	User logs in his/her account</p>
+</td><td><p>
+	the system displays the user timeline</p>
+</td><td>Passed</td></tr><tr><td width="5">2</td><td><p>
+	User clicks profile button</p>
+</td><td><p>
+	the system displays the profile of the user</p>
+</td><td>Passed</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="4">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="4"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Priority:</span></td><td colspan="4">Medium</td></tr>
+<tr><td colspan="5"></td></tr><tr style="font-weight: bold;background: #EEE;text-align: left;"><td width="20%" valign="top">Execution Details</td><td colspan="4">&nbsp;</b></td></tr>
+<tr><td width="20%" valign="top">Build</td><td 4>Iteration2</b></td></tr>
+<tr><td width="20%" valign="top">Tester</td><td  colspan="4" >dforibiana</b></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Execution Result:</span></td><td  colspan="4" ><b>Passed</b></td></tr>
+<tr><td width="20%"><span class="label">Execution Mode:</span></td><td  colspan="4" ><b>Manual</b></td></tr>
+<tr><td width="20%"><span class="label">Execution duration (min):</span></td><td  colspan="4" ><b>&nbsp;</b></td></tr>
+<tr><td width="20%" valign="top">Execution notes</td><td  colspan="4" >The user was able to successfully view his/her profile.</td></tr>
+</table>
+</div>
+<h2 class='doclevel'>Test Suite : Settings</h2>
+<p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="5">Test Case QSS141-03-36: User change his/her username(saved)</th></tr>
+<tr><td colspan="5"><span class="label">Summary:</span><br /><p>
+	The user changes his/her username</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td><td><span class="label">Execution Status:</span></td></tr><tr><td width="5">1</td><td><p>
+	User will click profile settings</p>
+</td><td><p>
+	System displays profile settings</p>
+</td><td>Passed</td></tr><tr><td width="5">2</td><td><p>
+	User selects edit profile</p>
+</td><td><p>
+	System displays edit profile page</p>
+</td><td>Passed</td></tr><tr><td width="5">3</td><td><p>
+	User selects his/her username</p>
+</td><td><p>
+	System highlighted the username</p>
+</td><td>Passed</td></tr><tr><td width="5">4</td><td><p>
+	User types his/her new username</p>
+</td><td><p>
+	System displays the new username</p>
+</td><td>Passed</td></tr><tr><td width="5">5</td><td><p>
+	User clicks save changes</p>
+</td><td><p>
+	System updates the profile username of the user</p>
+</td><td>Passed</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="4">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="4"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Priority:</span></td><td colspan="4">Medium</td></tr>
+<tr><td colspan="5"></td></tr><tr style="font-weight: bold;background: #EEE;text-align: left;"><td width="20%" valign="top">Execution Details</td><td colspan="4">&nbsp;</b></td></tr>
+<tr><td width="20%" valign="top">Build</td><td 4>Iteration2</b></td></tr>
+<tr><td width="20%" valign="top">Tester</td><td  colspan="4" >rrtalag</b></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Execution Result:</span></td><td  colspan="4" ><b>Passed</b></td></tr>
+<tr><td width="20%"><span class="label">Execution Mode:</span></td><td  colspan="4" ><b>Manual</b></td></tr>
+<tr><td width="20%"><span class="label">Execution duration (min):</span></td><td  colspan="4" ><b>&nbsp;</b></td></tr>
+<tr><td width="20%" valign="top">Execution notes</td><td  colspan="4" >The user can update or edit his/her profile information successfully. All the buttons were working successfully.</td></tr>
+</table>
+</div>
+<p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="5">Test Case QSS141-03-38: User change his/her username(not saved)</th></tr>
+<tr><td colspan="5"><span class="label">Summary:</span><br /><p>
+	The user changes his/her username but did not saved</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td><td><span class="label">Execution Status:</span></td></tr><tr><td width="5">1</td><td><p>
+	User will click profile settings</p>
+</td><td><p>
+	System displays profile settings</p>
+</td><td>Passed</td></tr><tr><td width="5">2</td><td><p>
+	User selects edit profile</p>
+</td><td><p>
+	System redirected to edit profile page</p>
+</td><td>Passed</td></tr><tr><td width="5">3</td><td><p>
+	User selects his/her username</p>
+</td><td><p>
+	System highlighted the username</p>
+</td><td>Passed</td></tr><tr><td width="5">4</td><td><p>
+	User types his/her new username</p>
+</td><td><p>
+	System displays the username</p>
+</td><td>Passed</td></tr><tr><td width="5">5</td><td><p>
+	User did not clicked save changes</p>
+</td><td><p>
+	System did not update the username</p>
+</td><td>Passed</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="4">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="4"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Priority:</span></td><td colspan="4">Medium</td></tr>
+<tr><td colspan="5"></td></tr><tr style="font-weight: bold;background: #EEE;text-align: left;"><td width="20%" valign="top">Execution Details</td><td colspan="4">&nbsp;</b></td></tr>
+<tr><td width="20%" valign="top">Build</td><td 4>Iteration2</b></td></tr>
+<tr><td width="20%" valign="top">Tester</td><td  colspan="4" >rrtalag</b></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Execution Result:</span></td><td  colspan="4" ><b>Passed</b></td></tr>
+<tr><td width="20%"><span class="label">Execution Mode:</span></td><td  colspan="4" ><b>Manual</b></td></tr>
+<tr><td width="20%"><span class="label">Execution duration (min):</span></td><td  colspan="4" ><b>&nbsp;</b></td></tr>
+<tr><td width="20%" valign="top">Execution notes</td><td  colspan="4" >Expected results were met.</td></tr>
+</table>
+</div>
+<p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="5">Test Case QSS141-03-40: User change his/her password(saved)</th></tr>
+<tr><td colspan="5"><span class="label">Summary:</span><br /><p>
+	User changes his/her password</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td><td><span class="label">Execution Status:</span></td></tr><tr><td width="5">1</td><td><p>
+	User clicks profile settings</p>
+</td><td><p>
+	System displays profile settings</p>
+</td><td>Passed</td></tr><tr><td width="5">2</td><td><p>
+	User selects edit profile</p>
+</td><td><p>
+	System displays edit profile page</p>
+</td><td>Passed</td></tr><tr><td width="5">3</td><td><p>
+	User selects password</p>
+</td><td><p>
+	System highlighted the password</p>
+</td><td>Passed</td></tr><tr><td width="5">4</td><td><p>
+	User types his/her new password</p>
+</td><td><p>
+	System displays the new password</p>
+</td><td>Passed</td></tr><tr><td width="5">5</td><td><p>
+	User clicks save changes</p>
+</td><td><p>
+	System updates the password</p>
+</td><td>Passed</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="4">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="4"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Priority:</span></td><td colspan="4">Medium</td></tr>
+<tr><td colspan="5"></td></tr><tr style="font-weight: bold;background: #EEE;text-align: left;"><td width="20%" valign="top">Execution Details</td><td colspan="4">&nbsp;</b></td></tr>
+<tr><td width="20%" valign="top">Build</td><td 4>Iteration2</b></td></tr>
+<tr><td width="20%" valign="top">Tester</td><td  colspan="4" >vpserrano</b></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Execution Result:</span></td><td  colspan="4" ><b>Passed</b></td></tr>
+<tr><td width="20%"><span class="label">Execution Mode:</span></td><td  colspan="4" ><b>Manual</b></td></tr>
+<tr><td width="20%"><span class="label">Execution duration (min):</span></td><td  colspan="4" ><b>1.00</b></td></tr>
+</table>
+</div>
+<p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="5">Test Case QSS141-03-42: User change his/her password(not saved)</th></tr>
+<tr><td colspan="5"><span class="label">Summary:</span><br /><p>
+	User changes his/her password but did not saved</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td><td><span class="label">Execution Status:</span></td></tr><tr><td width="5">1</td><td><p>
+	User will click profile settings</p>
+</td><td><p>
+	System will display profile settings</p>
+</td><td>Passed</td></tr><tr><td width="5">2</td><td><p>
+	User clicks edit profile</p>
+</td><td><p>
+	System displays edit profile page</p>
+</td><td>Passed</td></tr><tr><td width="5">3</td><td><p>
+	User selects his/her password</p>
+</td><td><p>
+	System highlighted the password</p>
+</td><td>Passed</td></tr><tr><td width="5">4</td><td><p>
+	User types his/her new password</p>
+</td><td><p>
+	System displays the new password</p>
+</td><td>Passed</td></tr><tr><td width="5">5</td><td><p>
+	User did not click save changes</p>
+</td><td><p>
+	System did not update the new account password</p>
+</td><td>Passed</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="4">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="4"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Priority:</span></td><td colspan="4">Medium</td></tr>
+<tr><td colspan="5"></td></tr><tr style="font-weight: bold;background: #EEE;text-align: left;"><td width="20%" valign="top">Execution Details</td><td colspan="4">&nbsp;</b></td></tr>
+<tr><td width="20%" valign="top">Build</td><td 4>Iteration2</b></td></tr>
+<tr><td width="20%" valign="top">Tester</td><td  colspan="4" >vpserrano</b></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Execution Result:</span></td><td  colspan="4" ><b>Passed</b></td></tr>
+<tr><td width="20%"><span class="label">Execution Mode:</span></td><td  colspan="4" ><b>Manual</b></td></tr>
+<tr><td width="20%"><span class="label">Execution duration (min):</span></td><td  colspan="4" ><b>2.00</b></td></tr>
+</table>
+</div>
+<p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="5">Test Case QSS141-03-24: User delete his/her comments(Basic flow)</th></tr>
+<tr><td colspan="5"><span class="label">Summary:</span><br /><p>
+	The user deletes his/her comments</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td><td><span class="label">Execution Status:</span></td></tr><tr><td width="5">1</td><td><p>
+	User view his/her comment</p>
+</td><td><p>
+	The system displays his/her comment</p>
+</td><td>Passed</td></tr><tr><td width="5">2</td><td><p>
+	User selects his/her comment</p>
+</td><td><p>
+	The system selected the comment</p>
+</td><td>Passed</td></tr><tr><td width="5">3</td><td><p>
+	User clicks &quot;edit&quot; to undo his/her comment</p>
+</td><td><p>
+	System will display edit menu</p>
+</td><td>Passed</td></tr><tr><td width="5">4</td><td><p>
+	User clicks delete to permanently delete his/her comment</p>
+</td><td><p>
+	The system deletes the his/her comment</p>
+</td><td>Passed</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="4">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="4"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Priority:</span></td><td colspan="4">Medium</td></tr>
+<tr><td colspan="5"></td></tr><tr style="font-weight: bold;background: #EEE;text-align: left;"><td width="20%" valign="top">Execution Details</td><td colspan="4">&nbsp;</b></td></tr>
+<tr><td width="20%" valign="top">Build</td><td 4>Iteration2</b></td></tr>
+<tr><td width="20%" valign="top">Tester</td><td  colspan="4" >obbriones</b></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Execution Result:</span></td><td  colspan="4" ><b>Passed</b></td></tr>
+<tr><td width="20%"><span class="label">Execution Mode:</span></td><td  colspan="4" ><b>Manual</b></td></tr>
+<tr><td width="20%"><span class="label">Execution duration (min):</span></td><td  colspan="4" ><b>&nbsp;</b></td></tr>
+</table>
+</div>
+<p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="5">Test Case QSS141-03-27: User delete his/her comments(Alternate flow)</th></tr>
+<tr><td colspan="5"><span class="label">Summary:</span><br /><p>
+	User deletes his/her comments in an alternative way</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td><td><span class="label">Execution Status:</span></td></tr><tr><td width="5">1</td><td><p>
+	User views his/her comments</p>
+</td><td><p>
+	The system will display the searched name of the account typed by the user</p>
+</td><td>Passed</td></tr><tr><td width="5">2</td><td><p>
+	User selects his/her comments&nbsp;</p>
+</td><td><p>
+	The system display selected comment</p>
+</td><td>Passed</td></tr><tr><td width="5">3</td><td><p>
+	User clicks &quot;edit&quot; to undo his/her comment</p>
+</td><td><p>
+	The system displays edit menu</p>
+</td><td>Passed</td></tr><tr><td width="5">4</td><td><p>
+	User add text to his/her comments</p>
+</td><td><p>
+	The system displays the text added by the user</p>
+</td><td>Passed</td></tr><tr><td width="5">5</td><td><p>
+	User clicks &quot;save changes&quot;</p>
+</td><td><p>
+	The system updates his/her comments</p>
+</td><td>Passed</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="4">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="4"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Priority:</span></td><td colspan="4">Medium</td></tr>
+<tr><td colspan="5"></td></tr><tr style="font-weight: bold;background: #EEE;text-align: left;"><td width="20%" valign="top">Execution Details</td><td colspan="4">&nbsp;</b></td></tr>
+<tr><td width="20%" valign="top">Build</td><td 4>Iteration2</b></td></tr>
+<tr><td width="20%" valign="top">Tester</td><td  colspan="4" >obbriones</b></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Execution Result:</span></td><td  colspan="4" ><b>Passed</b></td></tr>
+<tr><td width="20%"><span class="label">Execution Mode:</span></td><td  colspan="4" ><b>Manual</b></td></tr>
+<tr><td width="20%"><span class="label">Execution duration (min):</span></td><td  colspan="4" ><b>&nbsp;</b></td></tr>
+</table>
+</div>
+<p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="5">Test Case QSS141-03-29: User received notification from system</th></tr>
+<tr><td colspan="5"><span class="label">Summary:</span><br /><p>
+	The user receives a notification from the system</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td><td><span class="label">Execution Status:</span></td></tr><tr><td width="5">1</td><td><p>
+	User commit a violation</p>
+</td><td><p>
+	System sends a notification to the user for committing violation</p>
+</td><td>Passed</td></tr><tr><td width="5">2</td><td><p>
+	User sees the notification</p>
+</td><td><p>
+	User receives the notification from the system</p>
+</td><td>Passed</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="4">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="4"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Priority:</span></td><td colspan="4">Medium</td></tr>
+<tr><td colspan="5"></td></tr><tr style="font-weight: bold;background: #EEE;text-align: left;"><td width="20%" valign="top">Execution Details</td><td colspan="4">&nbsp;</b></td></tr>
+<tr><td width="20%" valign="top">Build</td><td 4>Iteration2</b></td></tr>
+<tr><td width="20%" valign="top">Tester</td><td  colspan="4" >obbriones</b></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Execution Result:</span></td><td  colspan="4" ><b>Passed</b></td></tr>
+<tr><td width="20%"><span class="label">Execution Mode:</span></td><td  colspan="4" ><b>Manual</b></td></tr>
+<tr><td width="20%"><span class="label">Execution duration (min):</span></td><td  colspan="4" ><b>&nbsp;</b></td></tr>
+</table>
+</div>
+<p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="5">Test Case QSS141-03-33: User received notification from the system(no notif)</th></tr>
+<tr><td colspan="5"><span class="label">Summary:</span><br /><p>
+	User did not receive any notification</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td><td><span class="label">Execution Status:</span></td></tr><tr><td width="5">1</td><td><p>
+	The user did not do any violation</p>
+</td><td><p>
+	The system will not send a notification to the user</p>
+</td><td>Passed</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="4">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="4"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Priority:</span></td><td colspan="4">Medium</td></tr>
+<tr><td colspan="5"></td></tr><tr style="font-weight: bold;background: #EEE;text-align: left;"><td width="20%" valign="top">Execution Details</td><td colspan="4">&nbsp;</b></td></tr>
+<tr><td width="20%" valign="top">Build</td><td 4>Iteration2</b></td></tr>
+<tr><td width="20%" valign="top">Tester</td><td  colspan="4" >obbriones</b></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Execution Result:</span></td><td  colspan="4" ><b>Passed</b></td></tr>
+<tr><td width="20%"><span class="label">Execution Mode:</span></td><td  colspan="4" ><b>Manual</b></td></tr>
+<tr><td width="20%"><span class="label">Execution duration (min):</span></td><td  colspan="4" ><b>&nbsp;</b></td></tr>
+</table>
+</div>
+<p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="5">Test Case QSS141-03-4: Create Post (With Content)</th></tr>
+<tr><td colspan="5"><span class="label">Summary:</span><br /><p>
+	Creation of Post with content</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td><td><span class="label">Execution Status:</span></td></tr><tr><td width="5">1</td><td><p>
+	Inputs an alphanumeric string into the post box</p>
+</td><td><p>
+	Post is edited/written on the post input box</p>
+</td><td>Passed</td></tr><tr><td width="5">2</td><td><p>
+	Press &quot;shout&quot;</p>
+</td><td><p>
+	Post is displayed</p>
+</td><td>Passed</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="4">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="4"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Priority:</span></td><td colspan="4">Medium</td></tr>
+<tr><td colspan="5"></td></tr><tr style="font-weight: bold;background: #EEE;text-align: left;"><td width="20%" valign="top">Execution Details</td><td colspan="4">&nbsp;</b></td></tr>
+<tr><td width="20%" valign="top">Build</td><td 4>Iteration2</b></td></tr>
+<tr><td width="20%" valign="top">Tester</td><td  colspan="4" >obbriones</b></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Execution Result:</span></td><td  colspan="4" ><b>Passed</b></td></tr>
+<tr><td width="20%"><span class="label">Execution Mode:</span></td><td  colspan="4" ><b>Manual</b></td></tr>
+<tr><td width="20%"><span class="label">Execution duration (min):</span></td><td  colspan="4" ><b>&nbsp;</b></td></tr>
+</table>
+</div>
+<p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="5">Test Case QSS141-03-5: Create Post (No Shout)</th></tr>
+<tr><td colspan="5"><span class="label">Summary:</span><br /><p>
+	Creating a Post without pressing the Shout Button</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td><td><span class="label">Execution Status:</span></td></tr><tr><td width="5">1</td><td><p>
+	Inputs post using alphanumeric string</p>
+<p>
+	&nbsp;</p>
+</td><td><p>
+	Displays text being inputted in the post text box</p>
+</td><td>Passed</td></tr><tr><td width="5">2</td><td><p>
+	Will not press &quot;Shout&quot;</p>
+</td><td><p>
+	Nothing will happen</p>
+</td><td>Passed</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="4">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="4"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Priority:</span></td><td colspan="4">Medium</td></tr>
+<tr><td colspan="5"></td></tr><tr style="font-weight: bold;background: #EEE;text-align: left;"><td width="20%" valign="top">Execution Details</td><td colspan="4">&nbsp;</b></td></tr>
+<tr><td width="20%" valign="top">Build</td><td 4>Iteration2</b></td></tr>
+<tr><td width="20%" valign="top">Tester</td><td  colspan="4" >obbriones</b></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Execution Result:</span></td><td  colspan="4" ><b>Passed</b></td></tr>
+<tr><td width="20%"><span class="label">Execution Mode:</span></td><td  colspan="4" ><b>Manual</b></td></tr>
+<tr><td width="20%"><span class="label">Execution duration (min):</span></td><td  colspan="4" ><b>&nbsp;</b></td></tr>
+</table>
+</div>
+<p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="5">Test Case QSS141-03-6: Creating Post (No Content)</th></tr>
+<tr><td colspan="5"><span class="label">Summary:</span><br /><p>
+	Creating a post that does not contain any content</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td><td><span class="label">Execution Status:</span></td></tr><tr><td width="5">1</td><td><p>
+	Inputs nothing into the post box</p>
+</td><td><p>
+	An empgty text boxt will be displayed</p>
+</td><td>Passed</td></tr><tr><td width="5">2</td><td><p>
+	Press Shout</p>
+</td><td><p>
+	A post without content will be created</p>
+</td><td>Passed</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="4">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="4"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Priority:</span></td><td colspan="4">Medium</td></tr>
+<tr><td colspan="5"></td></tr><tr style="font-weight: bold;background: #EEE;text-align: left;"><td width="20%" valign="top">Execution Details</td><td colspan="4">&nbsp;</b></td></tr>
+<tr><td width="20%" valign="top">Build</td><td 4>Iteration2</b></td></tr>
+<tr><td width="20%" valign="top">Tester</td><td  colspan="4" >obbriones</b></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Execution Result:</span></td><td  colspan="4" ><b>Passed</b></td></tr>
+<tr><td width="20%"><span class="label">Execution Mode:</span></td><td  colspan="4" ><b>Manual</b></td></tr>
+<tr><td width="20%"><span class="label">Execution duration (min):</span></td><td  colspan="4" ><b>&nbsp;</b></td></tr>
+</table>
+</div>
+<p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="5">Test Case QSS141-03-7: Logout(Yes)</th></tr>
+<tr><td colspan="5"><span class="label">Summary:</span><br /><p>
+	Logging out of system with yes as reply</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td><td><span class="label">Execution Status:</span></td></tr><tr><td width="5">1</td><td><p>
+	Clicks Logout Button</p>
+</td><td><p>
+	<span style="font-family: &quot;Trebuchet MS&quot;, Arial, Verdana, sans-serif; font-size: 11.7px; background-color: rgb(238, 238, 238);">System will prompt a confirmation message &ldquo;Are you sure you want to logout?</span></p>
+</td><td>Blocked</td></tr><tr><td width="5">2</td><td><p>
+	Clicks &quot;Yes&quot;</p>
+</td><td><p>
+	<span style="font-family: &quot;Trebuchet MS&quot;, Arial, Verdana, sans-serif; font-size: 11.7px; background-color: rgb(238, 238, 238);">Redirect to the user to the home page.</span></p>
+</td><td>Blocked</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="4">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="4"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Priority:</span></td><td colspan="4">Medium</td></tr>
+<tr><td colspan="5"></td></tr><tr style="font-weight: bold;background: #EEE;text-align: left;"><td width="20%" valign="top">Execution Details</td><td colspan="4">&nbsp;</b></td></tr>
+<tr><td width="20%" valign="top">Build</td><td 4>Iteration2</b></td></tr>
+<tr><td width="20%" valign="top">Tester</td><td  colspan="4" >obbriones</b></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Execution Result:</span></td><td  colspan="4" ><b>Blocked</b></td></tr>
+<tr><td width="20%"><span class="label">Execution Mode:</span></td><td  colspan="4" ><b>Manual</b></td></tr>
+<tr><td width="20%"><span class="label">Execution duration (min):</span></td><td  colspan="4" ><b>&nbsp;</b></td></tr>
+<tr><td width="20%" valign="top">Execution notes</td><td  colspan="4" >Confirmation for Logout does not exist</td></tr>
+</table>
+</div>
+<p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="5">Test Case QSS141-03-8: Logout(No)</th></tr>
+<tr><td colspan="5"><span class="label">Summary:</span><br /><p>
+	Logout with reply as No</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td><td><span class="label">Execution Status:</span></td></tr><tr><td width="5">1</td><td><p>
+	User clicks logout Button</p>
+</td><td><p>
+	<span style="font-family: &quot;Trebuchet MS&quot;, Arial, Verdana, sans-serif; font-size: 11.7px; background-color: rgb(238, 238, 238);">System will prompt a confirmation message &ldquo;Are you sure you want to logout?</span></p>
+</td><td>Blocked</td></tr><tr><td width="5">2</td><td><p>
+	User Clicks No</p>
+</td><td><p>
+	Message will dissapear</p>
+</td><td>Blocked</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="4">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="4"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Priority:</span></td><td colspan="4">Medium</td></tr>
+<tr><td colspan="5"></td></tr><tr style="font-weight: bold;background: #EEE;text-align: left;"><td width="20%" valign="top">Execution Details</td><td colspan="4">&nbsp;</b></td></tr>
+<tr><td width="20%" valign="top">Build</td><td 4>Iteration2</b></td></tr>
+<tr><td width="20%" valign="top">Tester</td><td  colspan="4" >obbriones</b></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Execution Result:</span></td><td  colspan="4" ><b>Blocked</b></td></tr>
+<tr><td width="20%"><span class="label">Execution Mode:</span></td><td  colspan="4" ><b>Manual</b></td></tr>
+<tr><td width="20%"><span class="label">Execution duration (min):</span></td><td  colspan="4" ><b>&nbsp;</b></td></tr>
+<tr><td width="20%" valign="top">Execution notes</td><td  colspan="4" >Confirmation for logout does not exist</td></tr>
+</table>
+</div>
+<p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="5">Test Case QSS141-03-9: Comment on post(with Content)</th></tr>
+<tr><td colspan="5"><span class="label">Summary:</span><br /><p>
+	Commenting on a post with content</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td><td><span class="label">Execution Status:</span></td></tr><tr><td width="5">1</td><td><p>
+	User views post</p>
+</td><td><p>
+	Post is displayed</p>
+</td><td>Passed</td></tr><tr><td width="5">2</td><td><p>
+	Comments on post using alphanumeric string</p>
+<p>
+	press enter</p>
+</td><td><p>
+	Displays comment on the post</p>
+</td><td>Passed</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="4">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="4"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Priority:</span></td><td colspan="4">Medium</td></tr>
+<tr><td colspan="5"></td></tr><tr style="font-weight: bold;background: #EEE;text-align: left;"><td width="20%" valign="top">Execution Details</td><td colspan="4">&nbsp;</b></td></tr>
+<tr><td width="20%" valign="top">Build</td><td 4>Iteration2</b></td></tr>
+<tr><td width="20%" valign="top">Tester</td><td  colspan="4" >obbriones</b></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Execution Result:</span></td><td  colspan="4" ><b>Passed</b></td></tr>
+<tr><td width="20%"><span class="label">Execution Mode:</span></td><td  colspan="4" ><b>Manual</b></td></tr>
+<tr><td width="20%"><span class="label">Execution duration (min):</span></td><td  colspan="4" ><b>&nbsp;</b></td></tr>
+</table>
+</div>
+<p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="5">Test Case QSS141-03-10: Comment on post(No content)</th></tr>
+<tr><td colspan="5"><span class="label">Summary:</span><br /><p>
+	Commenting on a post without performing text input</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td><td><span class="label">Execution Status:</span></td></tr><tr><td width="5">1</td><td><p>
+	Views post</p>
+</td><td><p>
+	Post is displayed</p>
+</td><td>Passed</td></tr><tr><td width="5">2</td><td><p>
+	Does not input content into the post</p>
+</td><td><p>
+	System will display comment even though theres no content</p>
+</td><td>Passed</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="4">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="4"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Priority:</span></td><td colspan="4">Medium</td></tr>
+<tr><td colspan="5"></td></tr><tr style="font-weight: bold;background: #EEE;text-align: left;"><td width="20%" valign="top">Execution Details</td><td colspan="4">&nbsp;</b></td></tr>
+<tr><td width="20%" valign="top">Build</td><td 4>Iteration2</b></td></tr>
+<tr><td width="20%" valign="top">Tester</td><td  colspan="4" >obbriones</b></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Execution Result:</span></td><td  colspan="4" ><b>Passed</b></td></tr>
+<tr><td width="20%"><span class="label">Execution Mode:</span></td><td  colspan="4" ><b>Manual</b></td></tr>
+<tr><td width="20%"><span class="label">Execution duration (min):</span></td><td  colspan="4" ><b>&nbsp;</b></td></tr>
+</table>
+</div>
+<h1 class='doclevel'>Test Suite : Admin:Administrator</h1>
+<h2 class='doclevel'>Test Suite : Log in Page</h2>
+<p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="5">Test Case QSS141-03-20: Admin Authentication (Correct Credentials)</th></tr>
+<tr><td colspan="5"><span class="label">Summary:</span><br /><p>
+	Admin verifies his/her account</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td><td><span class="label">Execution Status:</span></td></tr><tr><td width="5">1</td><td><p>
+	Admin types his username and password in the specified field</p>
+</td><td></td><td>Passed</td></tr><tr><td width="5">2</td><td><p>
+	Admin clicks the log in button</p>
+</td><td><p>
+	<span style="font-family: &quot;Trebuchet MS&quot;, Arial, Verdana, sans-serif; font-size: 11.7px; background-color: rgb(238, 238, 238);">System displays Dashboard</span></p>
+</td><td>Passed</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="4">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="4"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Priority:</span></td><td colspan="4">Medium</td></tr>
+<tr><td colspan="5"></td></tr><tr style="font-weight: bold;background: #EEE;text-align: left;"><td width="20%" valign="top">Execution Details</td><td colspan="4">&nbsp;</b></td></tr>
+<tr><td width="20%" valign="top">Build</td><td 4>Iteration2</b></td></tr>
+<tr><td width="20%" valign="top">Tester</td><td  colspan="4" >rrtalag</b></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Execution Result:</span></td><td  colspan="4" ><b>Passed</b></td></tr>
+<tr><td width="20%"><span class="label">Execution Mode:</span></td><td  colspan="4" ><b>Manual</b></td></tr>
+<tr><td width="20%"><span class="label">Execution duration (min):</span></td><td  colspan="4" ><b>&nbsp;</b></td></tr>
+<tr><td width="20%" valign="top">Execution notes</td><td  colspan="4" >The expected results were met. All the user needs to do is to click the necessary buttons.</td></tr>
+</table>
+</div>
+<p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="5">Test Case QSS141-03-22: Admin Authentication (Incorrect Credentials)</th></tr>
+<tr><td colspan="5"><span class="label">Summary:</span><br /><p>
+	Admin verifies his/her account but entered the wrong credentials.</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td><td><span class="label">Execution Status:</span></td></tr><tr><td width="5">1</td><td><p>
+	The admin entered incorrect password and username.</p>
+</td><td></td><td>Passed</td></tr><tr><td width="5">2</td><td><p>
+	<span style="font-family: &quot;Trebuchet MS&quot;, Arial, Verdana, sans-serif; font-size: 11.7px; background-color: rgb(238, 238, 238);">Admin clicks the Login button</span></p>
+</td><td><p>
+	<span style="font-family: &quot;Trebuchet MS&quot;, Arial, Verdana, sans-serif; font-size: 11.7px; background-color: rgb(238, 238, 238);">System will display message&nbsp;</span><strong style="font-family: &quot;Trebuchet MS&quot;, Arial, Verdana, sans-serif; font-size: 11.7px; background-color: rgb(238, 238, 238);">(EM01)</strong></p>
+</td><td>Passed</td></tr><tr><td width="5">3</td><td><p>
+	Admin leave the password and username fields blank</p>
+</td><td></td><td>Passed</td></tr><tr><td width="5">4</td><td><p>
+	<span style="font-family: &quot;Trebuchet MS&quot;, Arial, Verdana, sans-serif; font-size: 11.7px; background-color: rgb(238, 238, 238);">Admin clicks the Login button</span></p>
+</td><td><p>
+	<span style="font-family: &quot;Trebuchet MS&quot;, Arial, Verdana, sans-serif; font-size: 11.7px; background-color: rgb(238, 238, 238);">System will display message</span><strong style="font-family: &quot;Trebuchet MS&quot;, Arial, Verdana, sans-serif; font-size: 11.7px; background-color: rgb(238, 238, 238);">&nbsp;(EM02)</strong></p>
+</td><td>Passed</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="4">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="4"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Priority:</span></td><td colspan="4">Medium</td></tr>
+<tr><td colspan="5"></td></tr><tr style="font-weight: bold;background: #EEE;text-align: left;"><td width="20%" valign="top">Execution Details</td><td colspan="4">&nbsp;</b></td></tr>
+<tr><td width="20%" valign="top">Build</td><td 4>Iteration2</b></td></tr>
+<tr><td width="20%" valign="top">Tester</td><td  colspan="4" >rrtalag</b></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Execution Result:</span></td><td  colspan="4" ><b>Passed</b></td></tr>
+<tr><td width="20%"><span class="label">Execution Mode:</span></td><td  colspan="4" ><b>Manual</b></td></tr>
+<tr><td width="20%"><span class="label">Execution duration (min):</span></td><td  colspan="4" ><b>&nbsp;</b></td></tr>
+<tr><td width="20%" valign="top">Execution notes</td><td  colspan="4" >The results were met. The user wasnt able to log in using incorrect credentials.</td></tr>
+</table>
+</div>
+<h2 class='doclevel'>Test Suite : Reports Page</h2>
+<p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="5">Test Case QSS141-03-28: Admin views the report (Logged in)</th></tr>
+<tr><td colspan="5"><span class="label">Summary:</span><br /><p>
+	Admin would like to view the reports</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td><td><span class="label">Execution Status:</span></td></tr><tr><td width="5">1</td><td><p>
+	<span style="font-family: &quot;Trebuchet MS&quot;, Arial, Verdana, sans-serif; font-size: 11.7px; background-color: rgb(238, 238, 238);">Admin views the reports once he successfully logged in</span></p>
+</td><td><p>
+	<span style="font-family: &quot;Trebuchet MS&quot;, Arial, Verdana, sans-serif; font-size: 11.7px; background-color: rgb(238, 238, 238);">System displays the admin dashboard</span></p>
+</td><td>Passed</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="4">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="4"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Priority:</span></td><td colspan="4">Medium</td></tr>
+<tr><td colspan="5"></td></tr><tr style="font-weight: bold;background: #EEE;text-align: left;"><td width="20%" valign="top">Execution Details</td><td colspan="4">&nbsp;</b></td></tr>
+<tr><td width="20%" valign="top">Build</td><td 4>Iteration2</b></td></tr>
+<tr><td width="20%" valign="top">Tester</td><td  colspan="4" >rrtalag</b></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Execution Result:</span></td><td  colspan="4" ><b>Passed</b></td></tr>
+<tr><td width="20%"><span class="label">Execution Mode:</span></td><td  colspan="4" ><b>Manual</b></td></tr>
+<tr><td width="20%"><span class="label">Execution duration (min):</span></td><td  colspan="4" ><b>&nbsp;</b></td></tr>
+<tr><td width="20%" valign="top">Execution notes</td><td  colspan="4" >The result was a success. The admin can view the reports when he successfully logged in. The system will display the admin dashboard.</td></tr>
+</table>
+</div>
+<p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="5">Test Case QSS141-03-31: Admin views the report (not logged in)</th></tr>
+<tr><td colspan="5"><span class="label">Summary:</span><br /><p>
+	Admin would like to view the reports without logging in</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td><td><span class="label">Execution Status:</span></td></tr><tr><td width="5">1</td><td><p>
+	<span style="font-family: &quot;Trebuchet MS&quot;, Arial, Verdana, sans-serif; font-size: 11.7px; background-color: rgb(238, 238, 238);">Admin views the reports while not being logged in</span></p>
+</td><td><p>
+	Nothing to show</p>
+</td><td>Passed</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="4">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="4"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Priority:</span></td><td colspan="4">Medium</td></tr>
+<tr><td colspan="5"></td></tr><tr style="font-weight: bold;background: #EEE;text-align: left;"><td width="20%" valign="top">Execution Details</td><td colspan="4">&nbsp;</b></td></tr>
+<tr><td width="20%" valign="top">Build</td><td 4>Iteration2</b></td></tr>
+<tr><td width="20%" valign="top">Tester</td><td  colspan="4" >rrtalag</b></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Execution Result:</span></td><td  colspan="4" ><b>Passed</b></td></tr>
+<tr><td width="20%"><span class="label">Execution Mode:</span></td><td  colspan="4" ><b>Manual</b></td></tr>
+<tr><td width="20%"><span class="label">Execution duration (min):</span></td><td  colspan="4" ><b>&nbsp;</b></td></tr>
+</table>
+</div>
+<p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="5">Test Case QSS141-03-32: Logging out in Admin Account (YeS)</th></tr>
+<tr><td colspan="5"><span class="label">Summary:</span><br /><p>
+	The admin would like to log out</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td><td><span class="label">Execution Status:</span></td></tr><tr><td width="5">1</td><td><p>
+	<span style="font-family: &quot;Trebuchet MS&quot;, Arial, Verdana, sans-serif; font-size: 11.7px; background-color: rgb(238, 238, 238);">Admin clicks logout button</span></p>
+</td><td><p>
+	<span style="font-family: &quot;Trebuchet MS&quot;, Arial, Verdana, sans-serif; font-size: 11.7px; background-color: rgb(238, 238, 238);">System will prompt a confirmation message &ldquo;Are you sure you want to logout?&rdquo;</span></p>
+</td><td>Passed</td></tr><tr><td width="5">2</td><td><p>
+	<span style="font-family: &quot;Trebuchet MS&quot;, Arial, Verdana, sans-serif; font-size: 11.7px; background-color: rgb(238, 238, 238);">Admin clicks &ldquo;yes&rdquo;</span></p>
+</td><td><p>
+	<span style="font-family: &quot;Trebuchet MS&quot;, Arial, Verdana, sans-serif; font-size: 11.7px; background-color: rgb(238, 238, 238);">System will redirect the user to the home page.</span></p>
+</td><td>Passed</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="4">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="4"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Priority:</span></td><td colspan="4">Medium</td></tr>
+<tr><td colspan="5"></td></tr><tr style="font-weight: bold;background: #EEE;text-align: left;"><td width="20%" valign="top">Execution Details</td><td colspan="4">&nbsp;</b></td></tr>
+<tr><td width="20%" valign="top">Build</td><td 4>Iteration2</b></td></tr>
+<tr><td width="20%" valign="top">Tester</td><td  colspan="4" >rrtalag</b></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Execution Result:</span></td><td  colspan="4" ><b>Passed</b></td></tr>
+<tr><td width="20%"><span class="label">Execution Mode:</span></td><td  colspan="4" ><b>Manual</b></td></tr>
+<tr><td width="20%"><span class="label">Execution duration (min):</span></td><td  colspan="4" ><b>&nbsp;</b></td></tr>
+<tr><td width="20%" valign="top">Execution notes</td><td  colspan="4" >The expected results were met. There was a prompt message to make sure that the user wants to log out.</td></tr>
+</table>
+</div>
+<p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="5">Test Case QSS141-03-34: Logging out in Admin Account (No)</th></tr>
+<tr><td colspan="5"><span class="label">Summary:</span><br /><p>
+	The admin would like to logg out</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td><td><span class="label">Execution Status:</span></td></tr><tr><td width="5">1</td><td><p>
+	<span style="font-family: &quot;Trebuchet MS&quot;, Arial, Verdana, sans-serif; font-size: 11.7px; background-color: rgb(238, 238, 238);">Admin clicks logout button</span></p>
+</td><td><p>
+	<span style="font-family: &quot;Trebuchet MS&quot;, Arial, Verdana, sans-serif; font-size: 11.7px; background-color: rgb(238, 238, 238);">System will prompt a confirmation message &ldquo;Are you sure you want to logout?&rdquo;</span></p>
+</td><td>Passed</td></tr><tr><td width="5">2</td><td><p>
+	<span style="font-family: &quot;Trebuchet MS&quot;, Arial, Verdana, sans-serif; font-size: 11.7px; background-color: rgb(238, 238, 238);">The admin clicks no</span></p>
+</td><td><p>
+	<span style="font-family: &quot;Trebuchet MS&quot;, Arial, Verdana, sans-serif; font-size: 11.7px; background-color: rgb(238, 238, 238);">The message will disappear</span></p>
+</td><td>Passed</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="4">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="4"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Priority:</span></td><td colspan="4">Medium</td></tr>
+<tr><td colspan="5"></td></tr><tr style="font-weight: bold;background: #EEE;text-align: left;"><td width="20%" valign="top">Execution Details</td><td colspan="4">&nbsp;</b></td></tr>
+<tr><td width="20%" valign="top">Build</td><td 4>Iteration2</b></td></tr>
+<tr><td width="20%" valign="top">Tester</td><td  colspan="4" >rrtalag</b></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Execution Result:</span></td><td  colspan="4" ><b>Passed</b></td></tr>
+<tr><td width="20%"><span class="label">Execution Mode:</span></td><td  colspan="4" ><b>Manual</b></td></tr>
+<tr><td width="20%"><span class="label">Execution duration (min):</span></td><td  colspan="4" ><b>&nbsp;</b></td></tr>
+</table>
+</div>
+<p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="5">Test Case QSS141-03-37: Admin view registered accounts (All)</th></tr>
+<tr><td colspan="5"><span class="label">Summary:</span><br /><p>
+	Admin would like to view all the existing accounts</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td><td><span class="label">Execution Status:</span></td></tr><tr><td width="5">1</td><td><p>
+	<span style="font-family: &quot;Trebuchet MS&quot;, Arial, Verdana, sans-serif; font-size: 11.7px; background-color: rgb(238, 238, 238);">Admin clicks button named Users Accounts to view all registered accounts</span></p>
+</td><td><p>
+	<span style="font-family: &quot;Trebuchet MS&quot;, Arial, Verdana, sans-serif; font-size: 11.7px; background-color: rgb(238, 238, 238);">System display list of all registered accounts</span></p>
+</td><td>Passed</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="4">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="4"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Priority:</span></td><td colspan="4">Medium</td></tr>
+<tr><td colspan="5"></td></tr><tr style="font-weight: bold;background: #EEE;text-align: left;"><td width="20%" valign="top">Execution Details</td><td colspan="4">&nbsp;</b></td></tr>
+<tr><td width="20%" valign="top">Build</td><td 4>Iteration2</b></td></tr>
+<tr><td width="20%" valign="top">Tester</td><td  colspan="4" >rrtalag</b></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Execution Result:</span></td><td  colspan="4" ><b>Passed</b></td></tr>
+<tr><td width="20%"><span class="label">Execution Mode:</span></td><td  colspan="4" ><b>Manual</b></td></tr>
+<tr><td width="20%"><span class="label">Execution duration (min):</span></td><td  colspan="4" ><b>&nbsp;</b></td></tr>
+<tr><td width="20%" valign="top">Execution notes</td><td  colspan="4" >The system was able to display the list of all the registered accounts. Success</td></tr>
+</table>
+</div>
+<p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="5">Test Case QSS141-03-39: Admin view registered accounts (Selected)</th></tr>
+<tr><td colspan="5"><span class="label">Summary:</span><br /><p>
+	Admin would like to view some selected accounts</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td><td><span class="label">Execution Status:</span></td></tr><tr><td width="5">1</td><td><p>
+	<span style="font-family: &quot;Trebuchet MS&quot;, Arial, Verdana, sans-serif; font-size: 11.7px; background-color: rgb(238, 238, 238);">Admin clicks button named Users Accounts to view all registered accounts</span></p>
+</td><td><p>
+	<span style="font-family: &quot;Trebuchet MS&quot;, Arial, Verdana, sans-serif; font-size: 11.7px; background-color: rgb(238, 238, 238);">System display list of all registered accounts</span></p>
+</td><td>Passed</td></tr><tr><td width="5">2</td><td><p>
+	<span style="font-family: &quot;Trebuchet MS&quot;, Arial, Verdana, sans-serif; font-size: 11.7px; background-color: rgb(238, 238, 238);">Admin select one user name to view his/her account</span></p>
+</td><td><p>
+	<span style="font-family: &quot;Trebuchet MS&quot;, Arial, Verdana, sans-serif; font-size: 11.7px; background-color: rgb(238, 238, 238);">&nbsp;System displays the profile of the selected name.</span></p>
+</td><td>Passed</td></tr><tr><td width="5">3</td><td><p>
+	<span style="font-family: &quot;Trebuchet MS&quot;, Arial, Verdana, sans-serif; font-size: 11.7px; background-color: rgb(238, 238, 238);">Admin types the name of the account he/she wants to view&nbsp;</span></p>
+</td><td><p>
+	<span style="font-family: &quot;Trebuchet MS&quot;, Arial, Verdana, sans-serif; font-size: 11.7px; background-color: rgb(238, 238, 238);">System displays the searched name of the account typed by the admin</span></p>
+</td><td>Passed</td></tr><tr><td width="5">4</td><td><p>
+	<span style="font-family: &quot;Trebuchet MS&quot;, Arial, Verdana, sans-serif; font-size: 11.7px; background-color: rgb(238, 238, 238);">Admin clicks the name of the user display by the system</span></p>
+</td><td><p>
+	<span style="font-family: &quot;Trebuchet MS&quot;, Arial, Verdana, sans-serif; font-size: 11.7px; background-color: rgb(238, 238, 238);">System Display the profile of the selected name of the admin</span></p>
+</td><td>Passed</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="4">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="4"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Priority:</span></td><td colspan="4">Medium</td></tr>
+<tr><td colspan="5"></td></tr><tr style="font-weight: bold;background: #EEE;text-align: left;"><td width="20%" valign="top">Execution Details</td><td colspan="4">&nbsp;</b></td></tr>
+<tr><td width="20%" valign="top">Build</td><td 4>Iteration2</b></td></tr>
+<tr><td width="20%" valign="top">Tester</td><td  colspan="4" >rrtalag</b></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Execution Result:</span></td><td  colspan="4" ><b>Passed</b></td></tr>
+<tr><td width="20%"><span class="label">Execution Mode:</span></td><td  colspan="4" ><b>Manual</b></td></tr>
+<tr><td width="20%"><span class="label">Execution duration (min):</span></td><td  colspan="4" ><b>&nbsp;</b></td></tr>
+<tr><td width="20%" valign="top">Execution notes</td><td  colspan="4" >The admin can successfully view all the registered accounts.</td></tr>
+</table>
+</div>
+<p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="5">Test Case QSS141-03-41: Admin sends email (Personal)</th></tr>
+<tr><td colspan="5"><span class="label">Summary:</span><br /><p>
+	Admin would like to send personal message to the users.</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td><td><span class="label">Execution Status:</span></td></tr><tr><td width="5">1</td><td><p>
+	<span style="font-family: &quot;Trebuchet MS&quot;, Arial, Verdana, sans-serif; font-size: 11.7px; background-color: rgb(238, 238, 238);">&nbsp;Admin select compose message</span></p>
+</td><td><p>
+	<span style="font-family: &quot;Trebuchet MS&quot;, Arial, Verdana, sans-serif; font-size: 11.7px; background-color: rgb(238, 238, 238);">&nbsp;System display message menu</span></p>
+</td><td>Passed</td></tr><tr><td width="5">2</td><td><p>
+	<span style="font-family: &quot;Trebuchet MS&quot;, Arial, Verdana, sans-serif; font-size: 11.7px; background-color: rgb(238, 238, 238);">Admin input the names of the user/s accounts, title of the message and the body of the message using alpha numeric characters and specaial symbols</span></p>
+</td><td><p>
+	<span style="font-family: &quot;Trebuchet MS&quot;, Arial, Verdana, sans-serif; font-size: 11.7px; background-color: rgb(238, 238, 238);">&nbsp;System gets and display admin inputs</span></p>
+</td><td>Passed</td></tr><tr><td width="5">3</td><td><p>
+	<span style="font-family: &quot;Trebuchet MS&quot;, Arial, Verdana, sans-serif; font-size: 11.7px; background-color: rgb(238, 238, 238);">Admin clicks send button</span></p>
+</td><td><p>
+	<span style="font-family: &quot;Trebuchet MS&quot;, Arial, Verdana, sans-serif; font-size: 11.7px; background-color: rgb(238, 238, 238);">System confirm sending message to the recipients and&nbsp;</span><span style="background-color: rgb(238, 238, 238); font-family: &quot;Trebuchet MS&quot;, Arial, Verdana, sans-serif; font-size: 11.7px;">&nbsp;record the sent message in the &ldquo;sent items&rdquo;</span></p>
+</td><td>Passed</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="4">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="4"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Priority:</span></td><td colspan="4">Medium</td></tr>
+<tr><td colspan="5"></td></tr><tr style="font-weight: bold;background: #EEE;text-align: left;"><td width="20%" valign="top">Execution Details</td><td colspan="4">&nbsp;</b></td></tr>
+<tr><td width="20%" valign="top">Build</td><td 4>Iteration2</b></td></tr>
+<tr><td width="20%" valign="top">Tester</td><td  colspan="4" >rrtalag</b></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Execution Result:</span></td><td  colspan="4" ><b>Passed</b></td></tr>
+<tr><td width="20%"><span class="label">Execution Mode:</span></td><td  colspan="4" ><b>Manual</b></td></tr>
+<tr><td width="20%"><span class="label">Execution duration (min):</span></td><td  colspan="4" ><b>&nbsp;</b></td></tr>
+<tr><td width="20%" valign="top">Execution notes</td><td  colspan="4" >Expected results were met.</td></tr>
+</table>
+</div>
+<p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="5">Test Case QSS141-03-43: Admin post an Announcement(Timeline of  Users)</th></tr>
+<tr><td colspan="5"><span class="label">Summary:</span><br /><p>
+	Admin would like to post a messahe to the timeline of all users.</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td><td><span class="label">Execution Status:</span></td></tr><tr><td width="5">1</td><td><p>
+	<strong style="font-family: &quot;Trebuchet MS&quot;, Arial, Verdana, sans-serif; font-size: 11.7px; background-color: rgb(238, 238, 238);">&nbsp;</strong><span style="font-family: &quot;Trebuchet MS&quot;, Arial, Verdana, sans-serif; font-size: 11.7px; background-color: rgb(238, 238, 238);">Admin post an announcement to the timeline of the user/s</span></p>
+</td><td><p>
+	<span style="font-family: &quot;Trebuchet MS&quot;, Arial, Verdana, sans-serif; font-size: 11.7px; background-color: rgb(238, 238, 238);">System display posted announcement created by admin</span></p>
+</td><td>Passed</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="4">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="4"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Priority:</span></td><td colspan="4">Medium</td></tr>
+<tr><td colspan="5"></td></tr><tr style="font-weight: bold;background: #EEE;text-align: left;"><td width="20%" valign="top">Execution Details</td><td colspan="4">&nbsp;</b></td></tr>
+<tr><td width="20%" valign="top">Build</td><td 4>Iteration2</b></td></tr>
+<tr><td width="20%" valign="top">Tester</td><td  colspan="4" >rrtalag</b></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Execution Result:</span></td><td  colspan="4" ><b>Passed</b></td></tr>
+<tr><td width="20%"><span class="label">Execution Mode:</span></td><td  colspan="4" ><b>Manual</b></td></tr>
+<tr><td width="20%"><span class="label">Execution duration (min):</span></td><td  colspan="4" ><b>&nbsp;</b></td></tr>
+<tr><td width="20%" valign="top">Execution notes</td><td  colspan="4" >The admin can successfully post an announcement to the timeline of users and it will be displayed successfully.</td></tr>
+</table>
+</div>
+<h1 class='doclevel'>Test Suite : System-QG:Quickgrade</h1>
+<p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="5">Test Case QSS141-03-47: Detect cyber bullying event</th></tr>
+<tr><td colspan="5"><span class="label">Summary:</span><br /><p>
+	Detecting of a cyberbullying event in the system</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td><td><span class="label">Execution Status:</span></td></tr><tr><td width="5">1</td><td><p>
+	Create post or comment</p>
+</td><td><p>
+	Display post or comment</p>
+</td><td>Passed</td></tr><tr><td width="5">2</td><td><p>
+	System detects if the Post or comment is classified as cyber bullying</p>
+</td><td><p>
+	Event is registered in the system</p>
+</td><td>Passed</td></tr><tr><td width="5">3</td><td><p>
+	System detects if the Post or comment is classified as cyber bullying</p>
+</td><td><p>
+	Event is registered in the system</p>
+</td><td>Passed</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="4">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="4"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Priority:</span></td><td colspan="4">Medium</td></tr>
+<tr><td colspan="5"></td></tr><tr style="font-weight: bold;background: #EEE;text-align: left;"><td width="20%" valign="top">Execution Details</td><td colspan="4">&nbsp;</b></td></tr>
+<tr><td width="20%" valign="top">Build</td><td 4>Iteration2</b></td></tr>
+<tr><td width="20%" valign="top">Tester</td><td  colspan="4" >dforibiana</b></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Execution Result:</span></td><td  colspan="4" ><b>Passed</b></td></tr>
+<tr><td width="20%"><span class="label">Execution Mode:</span></td><td  colspan="4" ><b>Manual</b></td></tr>
+<tr><td width="20%"><span class="label">Execution duration (min):</span></td><td  colspan="4" ><b>&nbsp;</b></td></tr>
+<tr><td width="20%" valign="top">Execution notes</td><td  colspan="4" >Expected results were met. The system was able to detect if thepost or comment was cyber bullying.</td></tr>
+</table>
+</div>
+<p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="5">Test Case QSS141-03-48: Reporting a cyberbullying event</th></tr>
+<tr><td colspan="5"><span class="label">Summary:</span><br /><p>
+	System generates a report of a cyber bullying event</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td><td><span class="label">Execution Status:</span></td></tr><tr><td width="5">1</td><td><p>
+	System detectd that the classified post/comment is harmful</p>
+</td><td><p>
+	Post/comment is registered as harmful in the system</p>
+</td><td>Passed</td></tr><tr><td width="5">2</td><td><p>
+	Report is created based on gathered information</p>
+</td><td><p>
+	Generated report for admin</p>
+</td><td>Passed</td></tr><tr><td width="5">3</td><td><p>
+	Generated report is reviewed</p>
+</td><td><p>
+	New post is placed in users timeline</p>
+</td><td>Passed</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="4">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="4"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Priority:</span></td><td colspan="4">Medium</td></tr>
+<tr><td colspan="5"></td></tr><tr style="font-weight: bold;background: #EEE;text-align: left;"><td width="20%" valign="top">Execution Details</td><td colspan="4">&nbsp;</b></td></tr>
+<tr><td width="20%" valign="top">Build</td><td 4>Iteration2</b></td></tr>
+<tr><td width="20%" valign="top">Tester</td><td  colspan="4" >dforibiana</b></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Execution Result:</span></td><td  colspan="4" ><b>Passed</b></td></tr>
+<tr><td width="20%"><span class="label">Execution Mode:</span></td><td  colspan="4" ><b>Manual</b></td></tr>
+<tr><td width="20%"><span class="label">Execution duration (min):</span></td><td  colspan="4" ><b>&nbsp;</b></td></tr>
+<tr><td width="20%" valign="top">Execution notes</td><td  colspan="4" >Expected results were met. Reports were generated if the system detected that a certain post or comment is cyberbullying.</td></tr>
+</table>
+</div>
+<p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="5">Test Case QSS141-03-49: Notification of Violation to user (violation)</th></tr>
+<tr><td colspan="5"><span class="label">Summary:</span><br /><p>
+	Notification of violation is sent to user</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td><td><span class="label">Execution Status:</span></td></tr><tr><td width="5">1</td><td><p>
+	Send notification to the user with a violation</p>
+</td><td><p>
+	User recieves notification</p>
+</td><td>Passed</td></tr><tr><td width="5">2</td><td><p>
+	Notification of message in inbox</p>
+</td><td><p>
+	Displays message in inbox</p>
+</td><td>Passed</td></tr><tr><td width="5">3</td><td><p>
+	Clicks message of violation notification</p>
+</td><td><p>
+	Display message</p>
+</td><td>Passed</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="4">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="4"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Priority:</span></td><td colspan="4">Medium</td></tr>
+<tr><td colspan="5"></td></tr><tr style="font-weight: bold;background: #EEE;text-align: left;"><td width="20%" valign="top">Execution Details</td><td colspan="4">&nbsp;</b></td></tr>
+<tr><td width="20%" valign="top">Build</td><td 4>Iteration2</b></td></tr>
+<tr><td width="20%" valign="top">Tester</td><td  colspan="4" >dforibiana</b></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Execution Result:</span></td><td  colspan="4" ><b>Passed</b></td></tr>
+<tr><td width="20%"><span class="label">Execution Mode:</span></td><td  colspan="4" ><b>Manual</b></td></tr>
+<tr><td width="20%"><span class="label">Execution duration (min):</span></td><td  colspan="4" ><b>&nbsp;</b></td></tr>
+<tr><td width="20%" valign="top">Execution notes</td><td  colspan="4" >Resultes were successfully met. Users who committed a violation received a notification regarding the issue.</td></tr>
+</table>
+</div>
+<p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="5">Test Case QSS141-03-50: Notification of violation to user (announcement)</th></tr>
+<tr><td colspan="5"><span class="label">Summary:</span><br /><p>
+	Notification of announcement to user</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td><td><span class="label">Execution Status:</span></td></tr><tr><td width="5">1</td><td><p>
+	Send announcement to user</p>
+</td><td><p>
+	User recieves announcement</p>
+</td><td>Passed</td></tr><tr><td width="5">2</td><td><p>
+	User revieves notification of message in inbox</p>
+</td><td><p>
+	Notification is dispalyed</p>
+</td><td>Passed</td></tr><tr><td width="5">3</td><td><p>
+	user clicks announcement message</p>
+</td><td><p>
+	Message is displayed</p>
+</td><td>Passed</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="4">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="4"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Priority:</span></td><td colspan="4">Medium</td></tr>
+<tr><td colspan="5"></td></tr><tr style="font-weight: bold;background: #EEE;text-align: left;"><td width="20%" valign="top">Execution Details</td><td colspan="4">&nbsp;</b></td></tr>
+<tr><td width="20%" valign="top">Build</td><td 4>Iteration2</b></td></tr>
+<tr><td width="20%" valign="top">Tester</td><td  colspan="4" >dforibiana</b></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Execution Result:</span></td><td  colspan="4" ><b>Passed</b></td></tr>
+<tr><td width="20%"><span class="label">Execution Mode:</span></td><td  colspan="4" ><b>Manual</b></td></tr>
+<tr><td width="20%"><span class="label">Execution duration (min):</span></td><td  colspan="4" ><b>&nbsp;</b></td></tr>
+<tr><td width="20%" valign="top">Execution notes</td><td  colspan="4" >The user was bale to received the notification of message in the inbox. Expected results were met.</td></tr>
+</table>
+</div>
+<p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="5">Test Case QSS141-03-51: System detects if a user has 3 violations</th></tr>
+<tr><td colspan="5"><span class="label">Summary:</span><br /><p>
+	Checking if the user has committed 3 violations</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td><td><span class="label">Execution Status:</span></td></tr><tr><td width="5">1</td><td><p>
+	Create post/comment</p>
+</td><td><p>
+	post/comment is displayed</p>
+</td><td>Passed</td></tr><tr><td width="5">2</td><td><p>
+	Detect cyberbullying in post/comment</p>
+</td><td><p>
+	post/comment is classified as cyberbullying</p>
+</td><td>Passed</td></tr><tr><td width="5">3</td><td><p>
+	System records event of cyberbullying</p>
+</td><td><p>
+	Event is saved in database</p>
+</td><td>Passed</td></tr><tr><td width="5">4</td><td><p>
+	System sends email notifying the user has committed 3 violations</p>
+</td><td><p>
+	User recieves email</p>
+</td><td>Passed</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="4">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="4"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Priority:</span></td><td colspan="4">Medium</td></tr>
+<tr><td colspan="5"></td></tr><tr style="font-weight: bold;background: #EEE;text-align: left;"><td width="20%" valign="top">Execution Details</td><td colspan="4">&nbsp;</b></td></tr>
+<tr><td width="20%" valign="top">Build</td><td 4>Iteration2</b></td></tr>
+<tr><td width="20%" valign="top">Tester</td><td  colspan="4" >dforibiana</b></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Execution Result:</span></td><td  colspan="4" ><b>Passed</b></td></tr>
+<tr><td width="20%"><span class="label">Execution Mode:</span></td><td  colspan="4" ><b>Manual</b></td></tr>
+<tr><td width="20%"><span class="label">Execution duration (min):</span></td><td  colspan="4" ><b>&nbsp;</b></td></tr>
+<tr><td width="20%" valign="top">Execution notes</td><td  colspan="4" >Expected results were met. Posts or comments are displayed upon creating and each comment or post can be classified as cyberbullying or not. Each event was also saved in the database and the user received an email whenever they committed 3 violations.</td></tr>
+</table>
+</div>
+<p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="5">Test Case QSS141-03-52: Categorization of detected violation</th></tr>
+<tr><td colspan="5"><span class="label">Summary:</span><br /><p>
+	Categorization and sanctioning of detected violation</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td><td><span class="label">Execution Status:</span></td></tr><tr><td width="5">1</td><td><p>
+	Create post/comment</p>
+</td><td><p>
+	Post/comment is displayed</p>
+</td><td>Passed</td></tr><tr><td width="5">2</td><td><p>
+	detect cyberbullying on input</p>
+</td><td><p>
+	Post/comment is classified as cyberbullying</p>
+</td><td>Passed</td></tr><tr><td width="5">3</td><td><p>
+	Cyberbullying event is recorded in database</p>
+</td><td><p>
+	Event is now stored in database</p>
+</td><td>Passed</td></tr><tr><td width="5">4</td><td><p>
+	Violation email is sent to user</p>
+</td><td><p>
+	User recieves email</p>
+</td><td>Passed</td></tr><tr><td width="5">5</td><td><p>
+	Violation is sanctioned based on the category of violation</p>
+</td><td><p>
+	Violation is sanctioned</p>
+</td><td>Passed</td></tr><tr><td width="5">6</td><td><p>
+	User is notified of sanction through email</p>
+</td><td><p>
+	User recieves email</p>
+</td><td></td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="4">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="4"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Priority:</span></td><td colspan="4">Medium</td></tr>
+<tr><td colspan="5"></td></tr><tr style="font-weight: bold;background: #EEE;text-align: left;"><td width="20%" valign="top">Execution Details</td><td colspan="4">&nbsp;</b></td></tr>
+<tr><td width="20%" valign="top">Build</td><td 4>Iteration2</b></td></tr>
+<tr><td width="20%" valign="top">Tester</td><td  colspan="4" >dforibiana</b></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Execution Result:</span></td><td  colspan="4" ><b>Passed</b></td></tr>
+<tr><td width="20%"><span class="label">Execution Mode:</span></td><td  colspan="4" ><b>Manual</b></td></tr>
+<tr><td width="20%"><span class="label">Execution duration (min):</span></td><td  colspan="4" ><b>&nbsp;</b></td></tr>
+<tr><td width="20%" valign="top">Execution notes</td><td  colspan="4" >All the expected results were met.</td></tr>
+</table>
+</div>
+
+</body>
+</html>
